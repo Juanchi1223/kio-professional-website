@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-kio-negro antialiased;
+    line-height: 1.5;
+  }
+  :focus-visible {
+    @apply outline outline-[3px] outline-offset-2 outline-kio-terracota;
+  }
+  .on-dark :focus-visible,
+  footer :focus-visible {
+    @apply outline-white;
+  }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .rail {
+    scrollbar-width: none;
+  }
+  .rail::-webkit-scrollbar { display: none; }
+
+  .eyebrow {
+    @apply text-xs font-extrabold uppercase tracking-[0.16em] text-kio-terracota;
+  }
+  .h2 {
+    @apply text-balance;
+    @apply text-[32px] font-extrabold leading-[1.12] tracking-tight md:text-4xl lg:text-[44px];
+  }
+  .destacado { @apply text-kio-terracota; }
+
+  .btn {
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-full px-6 text-[17px] transition duration-150 active:scale-[0.98];
+  }
+  .btn-primario {
+    @apply btn bg-kio-terracota font-extrabold text-white hover:bg-kio-terracota-oscuro;
+  }
+  .btn-secundario {
+    @apply btn border-2 border-kio-negro bg-white font-bold text-kio-negro hover:bg-kio-negro hover:text-white;
+  }
+  .btn-blanco {
+    @apply btn bg-white font-extrabold text-kio-terracota hover:bg-kio-terracota-claro;
+  }
+  .btn-blanco-borde {
+    @apply btn border-2 border-white font-bold text-white hover:bg-white hover:text-kio-terracota;
+  }
+
+  /* Riel horizontal en mobile, grilla desde md */
+  .rail-snap {
+    @apply rail -mx-5 flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-5 scroll-px-5 md:mx-0 md:snap-none md:overflow-visible md:px-0;
+  }
+
+  .wrap { @apply mx-auto w-full max-w-screen-xl px-5 md:px-8 lg:px-10; }
+  .seccion { @apply py-14 md:py-20 lg:py-24; }
+
+  /* Placeholder visible de foto/dato pendiente (ver docs/pendientes.md) */
+  .ph {
+    @apply grid place-items-center bg-kio-arena p-4 text-center text-sm font-semibold text-kio-texto-suave;
+  }
+
+  /* Logos de prepagas: monocromo; para sumar uno, agregar un <li> con <img class="logo-prepaga"> */
+  .logo-prepaga {
+    @apply h-7 w-auto opacity-70 brightness-0 transition-opacity duration-200 hover:opacity-100;
+  }
+
+  /* Tarjetas de marcas: toman su color en hover/foco. En táctiles, solo la etiqueta lo muestra siempre */
+  .marca { @apply transition-[border-color,box-shadow] duration-200; }
+  .marca-icuo { --marca: theme(colors.kio.icuo); }
+  .marca-onyra { --marca: theme(colors.kio.onyra); }
+  .marca-tag {
+    @apply bg-kio-borde text-kio-negro transition-colors duration-200;
+  }
+  .marca-btn { @apply transition-[background-color,border-color,color,filter] duration-200; }
+  @media (hover: none) {
+    .marca .marca-tag { background-color: var(--marca); }
+  }
+  .marca:focus-within {
+    border-color: var(--marca);
+    box-shadow: 0 0 0 1px var(--marca);
+  }
+  .marca:focus-within .marca-tag { background-color: var(--marca); }
+  .marca:focus-within .marca-btn {
+    background-color: var(--marca);
+    border-color: var(--marca);
+    color: theme(colors.kio.negro);
+  }
+  @media (hover: hover) {
+    .marca:hover {
+      border-color: var(--marca);
+      box-shadow: 0 0 0 1px var(--marca);
+    }
+    .marca:hover .marca-tag { background-color: var(--marca); }
+    .marca:hover .marca-btn {
+      background-color: var(--marca);
+      border-color: var(--marca);
+      color: theme(colors.kio.negro);
+    }
+    .marca .marca-btn:hover { filter: brightness(0.93); }
+  }
+
+  /* Carrusel de servicios (mobile: una tarjeta por vez; desde md es grilla) */
+  .pista-carrusel { scroll-behavior: smooth; overscroll-behavior-x: contain; }
+  .carrusel-ctrl { display: none; }
+  @media (max-width: 767.98px) {
+    .js .carrusel-ctrl { display: flex; }
+    .js .hint-sin-js { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pista-carrusel { scroll-behavior: auto; }
+  }
+
+  .chip-check {
+    @apply flex items-center gap-3 rounded-[14px] bg-kio-negro-2 px-4 py-3.5 font-semibold;
+  }
+
+  /* Menú: en mobile es un panel colapsable (solo si hay JS); desde lg es una fila */
+  @media (max-width: 1023.98px) {
+    .js #menu:not(.is-open) { display: none; }
+  }
+}
+
+/* Menú abierto en mobile: el fondo no scrollea */
+@media (max-width: 1023.98px) {
+  html.menu-abierto { overflow: hidden; }
+}

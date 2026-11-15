@@ -1,0 +1,3 @@
+terracota: #9a3631
+gris: #818080
+negro: #131312

@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KIO Espacio de Salud — Kinesiología y traumatología en Vicente López</title>
+    <meta name="description"
+        content="Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares. Sacá tu turno online.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Nunito Sans', system-ui, sans-serif;
+            color: #131312;
+            background: #ffffff
+        }
+
+        a {
+            color: #9a3631
+        }
+
+        a:hover {
+            color: #7a2a26
+        }
+
+        details summary {
+            cursor: pointer;
+            list-style: none
+        }
+
+        details summary::-webkit-details-marker {
+            display: none
+        }
+
+        .rail {
+            scrollbar-width: none
+        }
+
+        .rail::-webkit-scrollbar {
+            display: none
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        [hidden] {
+            display: none !important
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="width: 100%; max-width: 480px; margin: 0 auto; box-sizing: border-box; font-family: 'Nunito Sans', system-ui, sans-serif; color: #131312; background: #ffffff; line-height: 1.5; position: relative">
+
+        <!-- Barra superior -->
+        <div
+            style="background: #131312; color: #ffffff; font-size: 13px; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center">
+            <span>Lun a Vie 8–20 h · Sáb 8:30–12:30</span>
+            <a href="https://kiosalud.geblix.com" style="color: #ffffff; font-weight: 700; text-decoration: none">Mis
+                turnos</a>
+        </div>
+
+        <!-- Header -->
+        <header style="position: sticky; top: 0; z-index: 10; background: #ffffff; border-bottom: 1px solid #ece8e6">
+            <div style="padding: 12px 20px; display: flex; align-items: center; justify-content: space-between">
+                <a href="#inicio-m"
+                    style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #131312">
+                    <img src="data:image/png;base64,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"
+                        alt="" style="height: 36px; width: auto">
+                    <span style="display: flex; flex-direction: column; line-height: 1">
+                        <span style="font-size: 22px; font-weight: 800; letter-spacing: 0.04em">KIO</span>
+                        <span
+                            style="font-size: 9px; font-weight: 700; letter-spacing: 0.18em; color: #5f5c5a; margin-top: 3px">ESPACIO
+                            DE SALUD</span>
+                    </span>
+                </a>
+                <button type="button" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"
+                    style="width: 48px; height: 48px; border-radius: 14px; border: 1px solid #e4dfdc; background: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; color: #131312">
+                    <span class="ico-open">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M4 7h16M4 12h16M4 17h16"></path>
+                        </svg>
+                    </span>
+                    <span class="ico-close" hidden>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M6 6l12 12M18 6 6 18"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <nav id="menu" hidden aria-label="Principal"
+                style="padding: 8px 20px 24px; display: flex; flex-direction: column; border-top: 1px solid #ece8e6; background: #ffffff">
+                <a href="#servicios-m" data-close
+                    style="padding: 14px 0; font-size: 18px; font-weight: 700; color: #131312; text-decoration: none; border-bottom: 1px solid #f0ecea">Servicios</a>
+                <a href="#tecnologia-m" data-close
+                    style="padding: 14px 0; font-size: 18px; font-weight: 700; color: #131312; text-decoration: none; border-bottom: 1px solid #f0ecea">Tecnología</a>
+                <a href="#especialidades-m" data-close
+                    style="padding: 14px 0; font-size: 18px; font-weight: 700; color: #131312; text-decoration: none; border-bottom: 1px solid #f0ecea">Especialidades</a>
+                <a href="#turnos-m" data-close
+                    style="padding: 14px 0; font-size: 18px; font-weight: 700; color: #131312; text-decoration: none; border-bottom: 1px solid #f0ecea">Cómo
+                    sacar turno</a>
+                <a href="#sede-m" data-close
+                    style="padding: 14px 0; font-size: 18px; font-weight: 700; color: #131312; text-decoration: none; border-bottom: 1px solid #f0ecea">La
+                    sede</a>
+                <a href="#preguntas-m" data-close
+                    style="padding: 14px 0; font-size: 18px; font-weight: 700; color: #131312; text-decoration: none">Preguntas
+                    frecuentes</a>
+                <a href="https://kiosalud.geblix.com"
+                    style="margin-top: 16px; background: #9a3631; color: #ffffff; text-decoration: none; font-weight: 800; font-size: 17px; padding: 16px; border-radius: 999px; text-align: center">Sacá
+                    tu turno</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section id="inicio-m" style="padding: 28px 20px 40px; display: flex; flex-direction: column; gap: 20px">
+            <div
+                style="display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; background: #f6ebe9; color: #7a2a26; font-weight: 700; font-size: 13px; padding: 7px 12px; border-radius: 999px">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Nueva sede: Maipú 1736, en COTO</span>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: stretch">
+                <div aria-hidden="true" style="width: 5px; background: #9a3631; border-radius: 3px; flex: none"></div>
+                <h1 style="margin: 0; font-size: 40px; line-height: 1.08; font-weight: 800; letter-spacing: -0.02em">El
+                    movimiento es salud y <span style="color: #9a3631">prevención</span>.</h1>
+            </div>
+            <p style="margin: 0; font-size: 17px; color: #4a4745">Kinesiología, traumatología y rehabilitación en
+                Vicente López. Prepagas y particulares.</p>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+                <a href="https://kiosalud.geblix.com"
+                    style="background: #9a3631; color: #ffffff; text-decoration: none; font-weight: 800; font-size: 17px; padding: 16px; border-radius: 999px; display: flex; align-items: center; justify-content: center; gap: 10px">
+                    <span>Sacá tu turno online</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </a>
+                <a href="#servicios-m"
+                    style="background: #ffffff; color: #131312; text-decoration: none; font-weight: 700; font-size: 17px; padding: 14px; border-radius: 999px; border: 2px solid #131312; text-align: center">Ver
+                    servicios</a>
+            </div>
+            <div
+                style="height: 460px; border-radius: 26px; background: #efe9e6; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box; margin-top: 8px">
+                <span
+                    style="position: absolute; top: 42%; left: 50%; transform: translate(-50%,-50%); width: 260px; font-size: 14px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO
+                    VERTICAL: paciente entrenando en el gimnasio de la sede nueva]</span>
+                <div
+                    style="background: #ffffff; border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px; align-items: center; box-shadow: 0 8px 24px rgba(19,19,18,0.10); width: 100%; box-sizing: border-box">
+                    <div
+                        style="width: 44px; height: 44px; border-radius: 12px; background: #9a3631; color: #ffffff; display: flex; align-items: center; justify-content: center; flex: none">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                            <path d="M16 2v4M8 2v4M3 10h18"></path>
+                        </svg>
+                    </div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.3"><span
+                            style="font-weight: 800">Turnos online 24 h</span><span
+                            style="font-size: 14px; color: #5f5c5a">Reservá o cancelá con tu DNI</span></div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-top: 8px">
+                <div style="display: flex; flex-direction: column"><span style="font-size: 22px; font-weight: 800">+10
+                        años</span><span style="font-size: 13px; color: #5f5c5a">en zona norte</span></div>
+                <div style="display: flex; flex-direction: column"><span
+                        style="font-size: 22px; font-weight: 800">3</span><span
+                        style="font-size: 13px; color: #5f5c5a">especialidades</span></div>
+                <div style="display: flex; flex-direction: column"><span style="font-size: 22px; font-weight: 800">Lun a
+                        Sáb</span><span style="font-size: 13px; color: #5f5c5a">horario amplio</span></div>
+            </div>
+        </section>
+
+        <!-- Prepagas -->
+        <section aria-label="Prepagas"
+            style="background: #f7f4f2; padding: 24px 0; display: flex; flex-direction: column; gap: 14px">
+            <span style="padding: 0 20px; font-weight: 700; font-size: 14px; color: #4a4745">Atendemos por prepagas y en
+                forma particular</span>
+            <div class="rail" style="display: flex; gap: 10px; overflow-x: auto; padding: 0 20px">
+                <div
+                    style="flex: 0 0 auto; padding: 0 20px; height: 48px; border-radius: 12px; background: #ffffff; border: 1px solid #e4dfdc; display: flex; align-items: center; font-weight: 800; color: #4a4745">
+                    OSDE</div>
+                <div
+                    style="flex: 0 0 auto; padding: 0 20px; height: 48px; border-radius: 12px; background: #ffffff; border: 1px solid #e4dfdc; display: flex; align-items: center; font-weight: 800; color: #4a4745">
+                    Swiss Medical</div>
+                <div
+                    style="flex: 0 0 auto; padding: 0 20px; height: 48px; border-radius: 12px; background: #ffffff; border: 1px dashed #c9c2be; display: flex; align-items: center; font-weight: 600; color: #5f5c5a">
+                    [PREPAGA]</div>
+                <div
+                    style="flex: 0 0 auto; padding: 0 20px; height: 48px; border-radius: 12px; background: #ffffff; border: 1px dashed #c9c2be; display: flex; align-items: center; font-weight: 600; color: #5f5c5a">
+                    [PREPAGA]</div>
+            </div>
+        </section>
+
+        <!-- Servicios: carrusel tipo "módulos" -->
+        <section id="servicios-m" style="padding: 56px 0 48px; display: flex; flex-direction: column; gap: 24px">
+            <div style="padding: 0 20px; display: flex; flex-direction: column; gap: 12px">
+                <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #9a3631">SERVICIOS</span>
+                <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">Todo tu tratamiento, <span
+                        style="color: #9a3631">en un solo lugar</span></h2>
+                <p style="margin: 0; font-size: 16px; color: #4a4745">De la consulta con el traumatólogo al alta en el
+                    gimnasio.</p>
+            </div>
+            <div class="rail"
+                style="display: flex; gap: 14px; overflow-x: auto; padding: 0 20px; scroll-snap-type: x mandatory">
+
+                <div
+                    style="flex: 0 0 280px; scroll-snap-align: start; border: 1px solid #ece8e6; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; background: #ffffff">
+                    <div
+                        style="height: 150px; background: #efe9e6; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO:
+                            sesión de kinesiología]</span>
+                    </div>
+                    <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #9a3631">SERVICIO
+                            01</span>
+                        <h3 style="margin: 0; font-size: 20px; font-weight: 800; line-height: 1.2">Kinesiología
+                            traumatológica</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Lesiones, esguinces, fracturas y
+                            posoperatorios con un plan personalizado.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="flex: 0 0 280px; scroll-snap-align: start; border: 1px solid #ece8e6; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; background: #ffffff">
+                    <div
+                        style="height: 150px; background: #efe9e6; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO:
+                            consultorio]</span>
+                    </div>
+                    <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #9a3631">SERVICIO
+                            02</span>
+                        <h3 style="margin: 0; font-size: 20px; font-weight: 800; line-height: 1.2">Consultas de
+                            traumatología</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Evaluación y diagnóstico para definir tu
+                            tratamiento.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="flex: 0 0 280px; scroll-snap-align: start; border: 1px solid #ece8e6; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; background: #ffffff">
+                    <div
+                        style="height: 150px; background: #efe9e6; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO:
+                            ejercicio funcional]</span>
+                    </div>
+                    <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #9a3631">SERVICIO
+                            03</span>
+                        <h3 style="margin: 0; font-size: 20px; font-weight: 800; line-height: 1.2">Rehabilitación
+                            funcional</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Recuperá fuerza, movilidad y confianza
+                            para tu día a día.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="flex: 0 0 280px; scroll-snap-align: start; border: 1px solid #ece8e6; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; background: #ffffff">
+                    <div
+                        style="height: 150px; background: #efe9e6; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO:
+                            sesión de RPG]</span>
+                    </div>
+                    <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #9a3631">SERVICIO
+                            04</span>
+                        <h3 style="margin: 0; font-size: 20px; font-weight: 800; line-height: 1.2">RPG</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Reeducación postural global para espalda,
+                            cuello y postura.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="flex: 0 0 280px; scroll-snap-align: start; border: 1px solid #ece8e6; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; background: #ffffff">
+                    <div
+                        style="height: 150px; background: #efe9e6; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO:
+                            gimnasio]</span>
+                    </div>
+                    <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #9a3631">SERVICIO
+                            05</span>
+                        <h3 style="margin: 0; font-size: 20px; font-weight: 800; line-height: 1.2">Gimnasio de
+                            rehabilitación</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Trabajo progresivo y supervisado para
+                            prevenir nuevas lesiones.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="flex: 0 0 280px; scroll-snap-align: start; border: 1px solid #ece8e6; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; background: #ffffff">
+                    <div
+                        style="height: 150px; background: #efe9e6; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a; text-align: center">[FOTO:
+                            aparatología]</span>
+                    </div>
+                    <div style="padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px">
+                        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #9a3631">SERVICIO
+                            06</span>
+                        <h3 style="margin: 0; font-size: 20px; font-weight: 800; line-height: 1.2">Fisioterapia</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Magnetoterapia, ultrasonido y ondas de
+                            choque.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div style="padding: 0 20px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #5f5c5a">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14"></path>
+                    <path d="m13 6 6 6-6 6"></path>
+                </svg>
+                <span>Deslizá para ver los 6 servicios</span>
+            </div>
+        </section>
+
+        <!-- Tecnología -->
+        <section id="tecnologia-m"
+            style="background: #131312; color: #ffffff; padding: 56px 20px; display: flex; flex-direction: column; gap: 20px">
+            <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #e8a49f">TECNOLOGÍA</span>
+            <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">Módulo de <span
+                    style="color: #e8a49f">rehabilitación avanzada</span></h2>
+            <p style="margin: 0; font-size: 16px; color: #d6d1ce">Sistema súper inductivo BTL: estimulación
+                electromagnética que acelera la recuperación.</p>
+            <div
+                style="height: 240px; border-radius: 22px; background: #2a2928; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+                <span style="font-size: 14px; font-weight: 600; color: #cfcac7; text-align: center">[FOTO: equipo BTL en
+                    uso]</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+
+                <div
+                    style="background: #1f1e1d; border-radius: 14px; padding: 14px 16px; display: flex; gap: 12px; align-items: center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8a49f" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none">
+                        <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span style="font-weight: 600">Dolor agudo y crónico</span>
+                </div>
+
+                <div
+                    style="background: #1f1e1d; border-radius: 14px; padding: 14px 16px; display: flex; gap: 12px; align-items: center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8a49f" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none">
+                        <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span style="font-weight: 600">Desinflamación del tejido profundo</span>
+                </div>
+
+                <div
+                    style="background: #1f1e1d; border-radius: 14px; padding: 14px 16px; display: flex; gap: 12px; align-items: center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8a49f" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none">
+                        <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span style="font-weight: 600">Estimulación muscular</span>
+                </div>
+
+                <div
+                    style="background: #1f1e1d; border-radius: 14px; padding: 14px 16px; display: flex; gap: 12px; align-items: center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8a49f" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none">
+                        <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span style="font-weight: 600">Bloqueos articulares</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Especialidades: "para quién es" -->
+        <section id="especialidades-m"
+            style="background: #f7f4f2; padding: 56px 20px; display: flex; flex-direction: column; gap: 20px">
+            <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #9a3631">UN ESPACIO
+                INTEGRAL</span>
+            <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">Tres especialidades, <span
+                    style="color: #9a3631">un mismo lugar</span></h2>
+            <div
+                style="background: #ffffff; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; border: 2px solid #9a3631">
+                <span
+                    style="align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; color: #ffffff; background: #9a3631; padding: 5px 10px; border-radius: 999px">KIO</span>
+                <h3 style="margin: 0; font-size: 22px; font-weight: 800">Kinesiología y traumatología</h3>
+                <div style="display: flex; flex-direction: column; gap: 8px; color: #4a4745; font-size: 15px">
+                    <span>✓ Prepagas y particulares</span>
+                    <span>✓ Consultorios y gimnasio de rehabilitación</span>
+                    <span>✓ RPG y fisioterapia</span>
+                </div>
+                <a href="https://kiosalud.geblix.com"
+                    style="background: #9a3631; color: #ffffff; text-decoration: none; font-weight: 800; padding: 14px; border-radius: 999px; text-align: center">Sacá
+                    tu turno</a>
+            </div>
+            <div
+                style="background: #ffffff; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; border: 1px solid #e4dfdc">
+                <span
+                    style="align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; color: #131312; background: #ece8e6; padding: 5px 10px; border-radius: 999px">ICUO</span>
+                <h3 style="margin: 0; font-size: 22px; font-weight: 800">Rehabilitación integrada</h3>
+                <div style="display: flex; flex-direction: column; gap: 8px; color: #4a4745; font-size: 15px">
+                    <span>✓ Tecnología avanzada y plan personalizado</span>
+                    <span>✓ Para la vida cotidiana y el deporte</span>
+                    <span>✓ Experiencia con bailarines del Teatro Colón</span>
+                </div>
+                <a href="#especialidades-m"
+                    style="background: #ffffff; color: #131312; text-decoration: none; font-weight: 700; padding: 12px; border-radius: 999px; text-align: center; border: 2px solid #131312">Conocé
+                    ICUO</a>
+            </div>
+            <div
+                style="background: #ffffff; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; border: 1px solid #e4dfdc">
+                <span
+                    style="align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; color: #131312; background: #ece8e6; padding: 5px 10px; border-radius: 999px">onyrA</span>
+                <h3 style="margin: 0; font-size: 22px; font-weight: 800">Medicina del sueño</h3>
+                <div style="display: flex; flex-direction: column; gap: 8px; color: #4a4745; font-size: 15px">
+                    <span>✓ Evaluación de ronquidos y apnea</span>
+                    <span>✓ Nutrición y fonoaudiología</span>
+                    <span>✓ Tratamiento integral del sueño</span>
+                </div>
+                <a href="#especialidades-m"
+                    style="background: #ffffff; color: #131312; text-decoration: none; font-weight: 700; padding: 12px; border-radius: 999px; text-align: center; border: 2px solid #131312">Conocé
+                    onyrA</a>
+            </div>
+        </section>
+
+        <!-- Cómo sacar turno: bloques numerados -->
+        <section id="turnos-m" style="padding: 56px 20px; display: flex; flex-direction: column; gap: 16px">
+            <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #9a3631">TURNOS</span>
+            <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">Sacá tu turno <span
+                    style="color: #9a3631">en minutos</span></h2>
+            <div style="display: flex; flex-direction: column; margin-top: 4px">
+
+                <div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #ece8e6">
+                    <span
+                        style="font-size: 24px; font-weight: 800; color: #9a3631; width: 36px; flex: none; line-height: 1.2">01</span>
+                    <div style="display: flex; flex-direction: column; gap: 2px">
+                        <h3 style="margin: 0; font-size: 18px; font-weight: 800">Entrá al portal</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">kiosalud.geblix.com, desde el celular o la
+                            compu.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #ece8e6">
+                    <span
+                        style="font-size: 24px; font-weight: 800; color: #9a3631; width: 36px; flex: none; line-height: 1.2">02</span>
+                    <div style="display: flex; flex-direction: column; gap: 2px">
+                        <h3 style="margin: 0; font-size: 18px; font-weight: 800">Registrate una sola vez</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Con tu nombre, DNI y celular.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #ece8e6">
+                    <span
+                        style="font-size: 24px; font-weight: 800; color: #9a3631; width: 36px; flex: none; line-height: 1.2">03</span>
+                    <div style="display: flex; flex-direction: column; gap: 2px">
+                        <h3 style="margin: 0; font-size: 18px; font-weight: 800">Elegí día y horario</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">La especialidad y el turno que mejor te
+                            quede.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid #ece8e6">
+                    <span
+                        style="font-size: 24px; font-weight: 800; color: #9a3631; width: 36px; flex: none; line-height: 1.2">04</span>
+                    <div style="display: flex; flex-direction: column; gap: 2px">
+                        <h3 style="margin: 0; font-size: 18px; font-weight: 800">¿No podés venir? Cancelalo</h3>
+                        <p style="margin: 0; font-size: 15px; color: #4a4745">Con tu DNI, y liberás el turno para otro
+                            paciente.</p>
+                    </div>
+                </div>
+
+            </div>
+            <a href="https://kiosalud.geblix.com"
+                style="margin-top: 8px; background: #9a3631; color: #ffffff; text-decoration: none; font-weight: 800; font-size: 17px; padding: 16px; border-radius: 999px; text-align: center">Ir
+                al portal de turnos</a>
+        </section>
+
+        <!-- La sede -->
+        <section id="sede-m"
+            style="background: #f7f4f2; padding: 56px 20px; display: flex; flex-direction: column; gap: 18px">
+            <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #9a3631">NOS MUDAMOS</span>
+            <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">Conocé nuestra <span
+                    style="color: #9a3631">nueva sede</span></h2>
+            <p style="margin: 0; font-size: 16px; color: #4a4745">Un espacio amplio y todo nuevo. Antes estábamos en
+                Maipú 1669.</p>
+            <div
+                style="height: 220px; border-radius: 22px; background: #e6dfdb; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+                <span style="font-size: 14px; font-weight: 600; color: #5f5c5a; text-align: center">[MAPA: Av. Maipú
+                    1736]</span>
+            </div>
+            <div
+                style="background: #ffffff; border-radius: 18px; padding: 6px 18px; display: flex; flex-direction: column">
+                <div
+                    style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #f0ecea">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a3631" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                        style="flex: none; margin-top: 2px">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">Av. Maipú 1736, 1er subsuelo</span><span
+                            style="font-size: 14px; color: #4a4745">Dentro de COTO · Vicente López</span></div>
+                </div>
+                <div
+                    style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #f0ecea">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a3631" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                        style="flex: none; margin-top: 2px">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 7v5l3 2"></path>
+                    </svg>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">Horarios</span><span style="font-size: 14px; color: #4a4745">Lun a
+                            Vie 8–20 h · Sáb 8:30–12:30 h</span></div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 0">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9a3631" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                        style="flex: none; margin-top: 2px">
+                        <path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 11v6h14v-6"></path>
+                        <circle cx="8" cy="19" r="1.5"></circle>
+                        <circle cx="16" cy="19" r="1.5"></circle>
+                    </svg>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">Cómo llegar</span><span
+                            style="font-size: 14px; color: #4a4745">[Completar: colectivos, tren,
+                            estacionamiento]</span></div>
+                </div>
+            </div>
+            <a href="#sede-m"
+                style="background: #ffffff; color: #131312; text-decoration: none; font-weight: 700; padding: 14px; border-radius: 999px; text-align: center; border: 2px solid #131312">Abrir
+                en Google Maps</a>
+        </section>
+
+        <!-- Equipo -->
+        <section style="padding: 56px 0; display: flex; flex-direction: column; gap: 20px">
+            <div style="padding: 0 20px; display: flex; flex-direction: column; gap: 12px">
+                <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #9a3631">EQUIPO</span>
+                <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">Profesionales que <span
+                        style="color: #9a3631">te acompañan</span></h2>
+            </div>
+            <div class="rail"
+                style="display: flex; gap: 14px; overflow-x: auto; padding: 0 20px; scroll-snap-type: x mandatory">
+
+                <div
+                    style="flex: 0 0 200px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px">
+                    <div
+                        style="height: 240px; border-radius: 20px; background: #efe9e6; display: flex; align-items: center; justify-content: center">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a">[FOTO]</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">[Nombre y apellido]</span><span
+                            style="font-size: 14px; color: #4a4745">Traumatología</span></div>
+                </div>
+
+                <div
+                    style="flex: 0 0 200px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px">
+                    <div
+                        style="height: 240px; border-radius: 20px; background: #efe9e6; display: flex; align-items: center; justify-content: center">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a">[FOTO]</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">[Nombre y apellido]</span><span
+                            style="font-size: 14px; color: #4a4745">Kinesiología</span></div>
+                </div>
+
+                <div
+                    style="flex: 0 0 200px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px">
+                    <div
+                        style="height: 240px; border-radius: 20px; background: #efe9e6; display: flex; align-items: center; justify-content: center">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a">[FOTO]</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">[Nombre y apellido]</span><span
+                            style="font-size: 14px; color: #4a4745">Kinesiología · RPG</span></div>
+                </div>
+
+                <div
+                    style="flex: 0 0 200px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px">
+                    <div
+                        style="height: 240px; border-radius: 20px; background: #efe9e6; display: flex; align-items: center; justify-content: center">
+                        <span style="font-size: 13px; font-weight: 600; color: #5f5c5a">[FOTO]</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.35"><span
+                            style="font-weight: 800">[Nombre y apellido]</span><span
+                            style="font-size: 14px; color: #4a4745">Gimnasio de rehabilitación</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section id="preguntas-m"
+            style="background: #f7f4f2; padding: 56px 20px; display: flex; flex-direction: column; gap: 18px">
+            <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.16em; color: #9a3631">PREGUNTAS
+                FRECUENTES</span>
+            <h2 style="margin: 0; font-size: 32px; line-height: 1.12; font-weight: 800">¿Tenés <span
+                    style="color: #9a3631">dudas</span>?</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+                <details style="background: #ffffff; border-radius: 16px; padding: 18px 20px" open="">
+                    <summary style="font-weight: 800; font-size: 17px">¿Cómo saco o cancelo un turno?</summary>
+                    <p style="margin: 10px 0 0; font-size: 15px; color: #4a4745">Desde kiosalud.geblix.com. Te registrás
+                        una vez con nombre, DNI y celular, y después reservás o cancelás con tu DNI.</p>
+                </details>
+                <details style="background: #ffffff; border-radius: 16px; padding: 18px 20px">
+                    <summary style="font-weight: 800; font-size: 17px">¿Atienden por prepaga?</summary>
+                    <p style="margin: 10px 0 0; font-size: 15px; color: #4a4745">Sí, y también en forma particular.
+                        [Completar lista de prepagas.]</p>
+                </details>
+                <details style="background: #ffffff; border-radius: 16px; padding: 18px 20px">
+                    <summary style="font-weight: 800; font-size: 17px">¿Dónde queda la nueva sede?</summary>
+                    <p style="margin: 10px 0 0; font-size: 15px; color: #4a4745">Av. Maipú 1736, primer subsuelo, dentro
+                        de COTO, Vicente López.</p>
+                </details>
+                <details style="background: #ffffff; border-radius: 16px; padding: 18px 20px">
+                    <summary style="font-weight: 800; font-size: 17px">¿Puedo consultar por WhatsApp?</summary>
+                    <p style="margin: 10px 0 0; font-size: 15px; color: #4a4745">Sí, al 11 6256-7798, solo por mensaje
+                        de texto.</p>
+                </details>
+                <details style="background: #ffffff; border-radius: 16px; padding: 18px 20px">
+                    <summary style="font-weight: 800; font-size: 17px">¿Qué traigo a la primera sesión?</summary>
+                    <p style="margin: 10px 0 0; font-size: 15px; color: #4a4745">[Completar: orden médica, credencial,
+                        estudios, ropa cómoda.]</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section
+            style="background: #9a3631; color: #ffffff; padding: 48px 20px; display: flex; flex-direction: column; gap: 16px">
+            <h2 style="margin: 0; font-size: 30px; line-height: 1.12; font-weight: 800">Cuidarte es un hábito diario.
+            </h2>
+            <p style="margin: 0; font-size: 16px; color: #f6e3e1">Reservá tu turno online en menos de dos minutos.</p>
+            <a href="https://kiosalud.geblix.com"
+                style="background: #ffffff; color: #9a3631; text-decoration: none; font-weight: 800; font-size: 17px; padding: 16px; border-radius: 999px; text-align: center">Sacá
+                tu turno</a>
+        </section>
+
+        <!-- Footer -->
+        <footer
+            style="background: #131312; color: #d6d1ce; padding: 40px 20px 120px; display: flex; flex-direction: column; gap: 24px; font-size: 15px">
+            <span style="display: flex; flex-direction: column; line-height: 1">
+                <span style="font-size: 24px; font-weight: 800; letter-spacing: 0.04em; color: #ffffff">KIO</span>
+                <span
+                    style="font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: #b5b0ad; margin-top: 4px">ESPACIO
+                    DE SALUD</span>
+            </span>
+            <div style="display: flex; flex-direction: column; gap: 8px">
+                <span>Av. Maipú 1736, 1er subsuelo, Vicente López</span>
+                <a href="https://wa.me/5491162567798" style="color: #d6d1ce; text-decoration: none">WhatsApp 11
+                    6256-7798</a>
+                <a href="https://www.instagram.com/kio_salud" style="color: #d6d1ce; text-decoration: none">Instagram
+                    @kio_salud</a>
+            </div>
+            <span style="font-size: 13px; color: #b5b0ad; border-top: 1px solid #2f2e2d; padding-top: 16px">© 2026 KIO
+                S.R.L.</span>
+        </footer>
+
+        <!-- Barra fija de turno -->
+        <div
+            style="position: sticky; bottom: 0; z-index: 20; background: #ffffff; border-top: 1px solid #ece8e6; padding: 12px 16px 20px; display: flex; gap: 10px; box-shadow: 0 -6px 20px rgba(19,19,18,0.08)">
+            <a href="https://kiosalud.geblix.com"
+                style="flex: 1 1 auto; background: #9a3631; color: #ffffff; text-decoration: none; font-weight: 800; font-size: 16px; border-radius: 999px; display: flex; align-items: center; justify-content: center; min-height: 52px">Sacá
+                tu turno</a>
+            <a href="https://wa.me/5491162567798" aria-label="Escribinos por WhatsApp"
+                style="flex: none; width: 52px; height: 52px; border-radius: 999px; border: 2px solid #131312; color: #131312; display: flex; align-items: center; justify-content: center; box-sizing: border-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"></path>
+                </svg>
+            </a>
+        </div>
+
+    </div>
+    <script>
+        (function () {
+            var b = document.getElementById('menu-btn'), m = document.getElementById('menu');
+            function set(o) {
+                m.hidden = !o; b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Cerrar menú' : 'Abrir menú');
+                b.querySelector('.ico-open').hidden = o; b.querySelector('.ico-close').hidden = !o;
+            }
+            b.addEventListener('click', function () { set(m.hidden); });
+            m.querySelectorAll('[data-close]').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+        })();
+    </script>
+</body>
+
+</html>
