@@ -6,7 +6,6 @@ Todos los placeholders están visibles en `index.html` y marcados con `data-pend
 
 | Sección (`id`) | Placeholder | Qué falta |
 |---|---|---|
-| `<head>` | `og:url` y `og:image` absoluta | `og:image` ya apunta a `assets/img/og/og-kio.jpg` (relativa); falta el dominio para `og:url` y para pasarla a URL absoluta, que es lo que exigen las redes |
 | Prepagas (`#prepagas`) | Otras prepagas | Faltan los logos de las demás (hoy solo OSDE y Swiss Medical). Se suman con un `<li>` + `<img class="logo-prepaga">` en `assets/img/prepagas/` |
 | Especialidades (`#especialidades`) | `[Completar: link de onyrA]` | URL del botón "Conocé onyrA" (hoy apunta a la misma sección) |
 | Sede | `[Completar: colectivos, tren, estacionamiento]` | Cómo llegar |
@@ -28,7 +27,7 @@ Todos los placeholders están visibles en `index.html` y marcados con `data-pend
 
 - Logotipo completo vectorial con la bajada "ESPACIO DE SALUD" (hoy el wordmark es texto junto al isotipo).
 - Favicon: se generó desde el isotipo (`assets/img/marca/favicon-32.png`, `marca/apple-touch-icon.png`); falta un `.ico` si lo quieren.
-- Dominio y hosting; después completar `og:url` y `og:image`.
+- Dominio y hosting: `og:url` y `og:image` ya apuntan a https://kiosalud.com; verificar que el dominio quede conectado.
 
 ## Footer: elementos de la referencia que no se incluyeron (sin datos)
 
@@ -40,7 +39,7 @@ Todos los placeholders están visibles en `index.html` y marcados con `data-pend
 
 ## Fotos cargadas (revisar con KIO)
 
-- Se usan `hero-gimnasio.jpg`, las 6 `servicio-*.jpg`, `tecnologia-equipo.jpg` y `og-kio.jpg`. `tecnologia-equipo-alt.jpg` quedó sin usar.
+- Se usan `hero-gimnasio.jpg`, las 6 `servicio-*.jpg`, `tecnologia-equipo.jpg` y `og-kio.jpg`.
 - Confirmar que las fotos puedan publicarse (derechos y consentimiento de las personas) y que muestren el equipamiento y las instalaciones reales, en especial la de Tecnología, que se presenta como el sistema BTL.
 - Los `alt` están escritos a partir de lo que se ve en cada imagen; ajustarlos si cambian las fotos.
 - No quedan placeholders de foto salvo los datos pendientes de la tabla.
