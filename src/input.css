@@ -39,7 +39,16 @@
   .rail::-webkit-scrollbar { display: none; }
 
   .eyebrow {
-    @apply text-xs font-extrabold uppercase tracking-[0.16em] text-kio-terracota;
+    @apply flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-kio-terracota;
+  }
+  /* Marca de inicio de sección: línea corta que retoma la barra del H1 */
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    flex: none;
   }
   .h2 {
     @apply text-balance;
@@ -69,7 +78,67 @@
   }
 
   .wrap { @apply mx-auto w-full max-w-screen-xl px-5 md:px-8 lg:px-10; }
-  .seccion { @apply py-14 md:py-20 lg:py-24; }
+  /* Separadores: cada corte entre secciones tiene su propia forma. El borde se dibuja con un
+     ::before del mismo color que la sección, montado sobre el final de la sección anterior. */
+  :root { --dh: 28px; --solapa: 24px; }
+  @media (min-width: 768px) { :root { --dh: 40px; --solapa: 32px; } }
+  @media (min-width: 1024px) { :root { --dh: 56px; --solapa: 40px; } }
+  .sep { position: relative; }
+  .sep::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: var(--dh);
+    background: inherit;
+    pointer-events: none;
+  }
+  .sep-arco::before { border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+  .sep-onda::before {
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+  }
+  /* Cierre de sección: el mismo recurso, dibujado hacia abajo sobre el inicio de la sección siguiente */
+  .sep-arco-fin::after,
+  .sep-onda-fin::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: inherit;
+    pointer-events: none;
+  }
+  .sep-arco-fin::after {
+    height: calc(var(--dh) * 0.5);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  }
+  .sep-onda-fin::after {
+    height: var(--dh);
+    transform: scaleY(-1);
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+  }
+  /* Solapa redondeada: la usa el footer sobre el cartel del CTA */
+  .solapa {
+    position: relative;
+    margin-top: calc(var(--solapa) * -1);
+    border-top-left-radius: var(--solapa);
+    border-top-right-radius: var(--solapa);
+  }
+  /* Ritmo: secciones principales más amplias que las de apoyo */
+  .seccion { padding-top: 4rem; padding-bottom: 4rem; }
+  .seccion-apoyo { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+  @media (min-width: 768px) {
+    .seccion { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+    .seccion-apoyo { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .seccion { padding-top: 7rem; padding-bottom: 7rem; }
+    .seccion-apoyo { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+  }
 
   /* Placeholder visible de foto/dato pendiente (ver docs/pendientes.md) */
   .ph {
