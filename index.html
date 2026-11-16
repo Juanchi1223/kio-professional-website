@@ -5,22 +5,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KIO Espacio de Salud — Kinesiología y traumatología en Vicente López</title>
-  <meta name="description" content="Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares. Sacá tu turno online.">
+  <meta name="description"
+    content="Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares. Sacá tu turno online.">
   <meta name="theme-color" content="#9a3631">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="KIO Espacio de Salud">
   <meta property="og:title" content="KIO Espacio de Salud — Kinesiología y traumatología en Vicente López">
-  <meta property="og:description" content="Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares. Sacá tu turno online.">
-  <!-- [Completar: og:image (1200×630) y og:url cuando haya dominio — ver docs/pendientes.md] -->
+  <meta property="og:description"
+    content="Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares. Sacá tu turno online.">
+  <meta property="og:image" content="assets/img/og-kio.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- [Completar: og:url y pasar og:image a URL absoluta cuando haya dominio — ver docs/pendientes.md] -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="dist/styles.css">
   <script>document.documentElement.classList.add('js');</script>
 
@@ -49,13 +56,16 @@
 </head>
 
 <body>
-  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-full focus:bg-kio-negro focus:px-5 focus:py-3 focus:font-bold focus:text-white">Saltar al contenido</a>
+  <a href="#contenido"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-full focus:bg-kio-negro focus:px-5 focus:py-3 focus:font-bold focus:text-white">Saltar
+    al contenido</a>
 
   <!-- Barra superior -->
   <div class="bg-kio-negro text-[13px] text-white">
     <div class="wrap flex items-center justify-between py-2">
       <span>Lun a Vie 8–20 h · Sáb 8:30–12:30</span>
-      <a href="https://kiosalud.geblix.com" class="-my-2.5 inline-flex min-h-[44px] items-center font-bold hover:underline">Mis turnos</a>
+      <a href="https://kiosalud.geblix.com"
+        class="-my-2.5 inline-flex min-h-[44px] items-center font-bold hover:underline">Mis turnos</a>
     </div>
   </div>
 
@@ -76,21 +86,39 @@
       <button type="button" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"
         class="flex h-12 w-12 items-center justify-center rounded-[14px] border border-kio-borde-2 bg-white text-kio-negro transition hover:bg-kio-crema active:scale-95 lg:hidden">
         <span class="ico-open">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
         </span>
         <span class="ico-close" hidden>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
         </span>
       </button>
 
-      <nav id="menu" aria-label="Principal" class="absolute inset-x-0 top-full flex max-h-[calc(100dvh-4rem)] flex-col overflow-y-auto border-b border-t border-kio-borde bg-white px-5 pb-6 pt-2 shadow-float md:px-8 lg:static lg:max-h-none lg:w-auto lg:flex-row lg:items-center lg:gap-1 lg:overflow-visible lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
-        <a href="#servicios" class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Servicios</a>
-        <a href="#tecnologia" class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Tecnología</a>
-        <a href="#especialidades" class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Especialidades</a>
-        <a href="#turnos" class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Cómo sacar turno</a>
-        <a href="#sede" class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">La sede</a>
-        <a href="#preguntas" class="flex min-h-[48px] items-center py-3.5 text-lg font-bold hover:text-kio-terracota lg:px-3 lg:py-2 lg:text-[15px]">Preguntas frecuentes</a>
-        <a href="https://kiosalud.geblix.com" class="btn-primario mt-4 !text-[17px] lg:ml-3 lg:mt-0 lg:!min-h-[44px] lg:!px-5 lg:!text-[15px]">Sacá tu turno</a>
+      <nav id="menu" aria-label="Principal"
+        class="absolute inset-x-0 top-full flex max-h-[calc(100dvh-4rem)] flex-col overflow-y-auto border-b border-t border-kio-borde bg-white px-5 pb-6 pt-2 shadow-float md:px-8 lg:static lg:max-h-none lg:w-auto lg:flex-row lg:items-center lg:gap-1 lg:overflow-visible lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+        <a href="#servicios"
+          class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Servicios</a>
+        <a href="#tecnologia"
+          class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Tecnología</a>
+        <a href="#especialidades"
+          class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Especialidades</a>
+        <a href="#turnos"
+          class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">Cómo
+          sacar turno</a>
+        <a href="#sede"
+          class="flex min-h-[48px] items-center border-b border-kio-borde py-3.5 text-lg font-bold hover:text-kio-terracota lg:border-0 lg:px-3 lg:py-2 lg:text-[15px]">La
+          sede</a>
+        <a href="#preguntas"
+          class="flex min-h-[48px] items-center py-3.5 text-lg font-bold hover:text-kio-terracota lg:px-3 lg:py-2 lg:text-[15px]">Preguntas
+          frecuentes</a>
+        <a href="https://kiosalud.geblix.com"
+          class="btn-primario mt-4 !text-[17px] lg:ml-3 lg:mt-0 lg:!min-h-[44px] lg:!px-5 lg:!text-[15px]">Sacá tu
+          turno</a>
       </nav>
     </div>
   </header>
@@ -103,24 +131,40 @@
         <div class="flex flex-col gap-5 lg:justify-end">
           <div class="flex items-stretch gap-3.5">
             <div aria-hidden="true" class="w-[5px] flex-none rounded-[3px] bg-kio-terracota"></div>
-            <h1 id="hero-titulo" class="text-[40px] font-extrabold leading-[1.08] tracking-[-0.02em] md:text-5xl lg:text-[56px]">El movimiento es salud y <span class="destacado">prevención</span>.</h1>
+            <h1 id="hero-titulo"
+              class="text-[40px] font-extrabold leading-[1.08] tracking-[-0.02em] md:text-5xl lg:text-[56px]">El
+              movimiento es salud y <span class="destacado">prevención</span>.</h1>
           </div>
-          <p class="text-[17px] text-kio-texto md:text-lg lg:max-w-lg">Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares.</p>
+          <p class="text-[17px] text-kio-texto md:text-lg lg:max-w-lg">Kinesiología, traumatología y rehabilitación en
+            Vicente López. Prepagas y particulares.</p>
           <div class="flex flex-col gap-2.5 md:flex-row md:gap-3">
             <a href="https://kiosalud.geblix.com" class="btn-primario md:px-8">
               <span>Sacá tu turno online</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m13 6 6 6-6 6" />
+              </svg>
             </a>
             <a href="#servicios" class="btn-secundario md:px-8">Ver servicios</a>
           </div>
         </div>
 
         <!-- Foto hero -->
-        <div class="relative mt-2 flex h-[460px] items-end overflow-hidden rounded-[26px] bg-kio-arena p-4 md:h-[520px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:h-auto lg:min-h-[560px]">
-          <span data-pendiente class="absolute left-1/2 top-[42%] w-[260px] -translate-x-1/2 -translate-y-1/2 text-center text-sm font-semibold text-kio-texto-suave">[FOTO VERTICAL: paciente entrenando en el gimnasio de la sede nueva]</span>
-          <div class="relative flex w-full items-center gap-3 rounded-2xl bg-white px-4 py-3.5 shadow-float md:max-w-sm">
+        <div
+          class="relative mt-2 flex h-[460px] items-end overflow-hidden rounded-[26px] bg-kio-arena p-4 md:h-[520px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:h-auto lg:min-h-[560px]">
+          <img src="assets/img/servicio-rehabilitacion.jpg"
+            alt="Kinesiólogo acompañando a una paciente que hace un ejercicio con banda elástica en el gimnasio de rehabilitación"
+            width="900" height="1200" fetchpriority="high" decoding="async"
+            class="absolute inset-0 h-full w-full object-cover">
+          <div
+            class="relative flex w-full items-center gap-3 rounded-2xl bg-white px-4 py-3.5 shadow-float md:max-w-sm">
             <div class="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-kio-terracota text-white">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
             </div>
             <div class="flex flex-col leading-[1.3]">
               <span class="font-extrabold">Turnos online 24 h</span>
@@ -130,10 +174,14 @@
         </div>
 
         <!-- Datos -->
-        <ul class="list-none flex justify-between gap-4 pt-2 lg:col-start-1 lg:row-start-2 lg:justify-start lg:gap-12 lg:pt-0">
-          <li class="flex flex-col"><span class="text-[22px] font-extrabold md:text-2xl">+10 años</span><span class="text-[13px] text-kio-texto-suave">en zona norte</span></li>
-          <li class="flex flex-col"><span class="text-[22px] font-extrabold md:text-2xl">3</span><span class="text-[13px] text-kio-texto-suave">especialidades</span></li>
-          <li class="flex flex-col"><span class="text-[22px] font-extrabold md:text-2xl">Lun a Sáb</span><span class="text-[13px] text-kio-texto-suave">horario amplio</span></li>
+        <ul
+          class="list-none flex justify-between gap-4 pt-2 lg:col-start-1 lg:row-start-2 lg:justify-start lg:gap-12 lg:pt-0">
+          <li class="flex flex-col"><span class="text-[22px] font-extrabold md:text-2xl">+10 años</span><span
+              class="text-[13px] text-kio-texto-suave">en zona norte</span></li>
+          <li class="flex flex-col"><span class="text-[22px] font-extrabold md:text-2xl">3</span><span
+              class="text-[13px] text-kio-texto-suave">especialidades</span></li>
+          <li class="flex flex-col"><span class="text-[22px] font-extrabold md:text-2xl">Lun a Sáb</span><span
+              class="text-[13px] text-kio-texto-suave">horario amplio</span></li>
         </ul>
       </div>
     </section>
@@ -141,10 +189,13 @@
     <!-- Sección: Prepagas -->
     <section id="prepagas" aria-labelledby="prepagas-titulo" class="bg-kio-crema py-6 md:py-8">
       <div class="wrap flex flex-col gap-3.5 md:flex-row md:items-center md:justify-between md:gap-8">
-        <h2 id="prepagas-titulo" class="text-sm font-bold text-kio-texto md:max-w-[16rem]">Atendemos por prepagas y en forma particular</h2>
+        <h2 id="prepagas-titulo" class="text-sm font-bold text-kio-texto md:max-w-[16rem]">Atendemos por prepagas y en
+          forma particular</h2>
         <ul class="rail-snap list-none items-center !gap-8 md:flex-1 md:flex-wrap md:justify-end md:!gap-x-10">
-          <li class="flex-none"><img src="assets/img/prepagas/osde.png" alt="OSDE" width="422" height="164" loading="lazy" class="logo-prepaga"></li>
-          <li class="flex-none"><img src="assets/img/prepagas/swiss-medical.png" alt="Swiss Medical" width="600" height="147" loading="lazy" class="logo-prepaga"></li>
+          <li class="flex-none"><img src="assets/img/prepagas/osde.png" alt="OSDE" width="422" height="164"
+              loading="lazy" class="logo-prepaga"></li>
+          <li class="flex-none"><img src="assets/img/prepagas/swiss-medical.png" alt="Swiss Medical" width="600"
+              height="147" loading="lazy" class="logo-prepaga"></li>
         </ul>
       </div>
     </section>
@@ -159,66 +210,100 @@
         </div>
 
         <div data-carrusel role="region" aria-roledescription="carrusel" aria-label="Servicios" class="relative">
-          <div data-pista tabindex="0" aria-label="Servicios: deslizá o usá las flechas del teclado" class="pista-carrusel rail flex snap-x snap-mandatory gap-3.5 overflow-x-auto rounded-card md:grid md:grid-cols-2 md:snap-none md:gap-5 md:overflow-visible lg:grid-cols-3 lg:gap-6">
-          <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 1 de 6" class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
-            <div data-pendiente class="ph h-[200px] md:h-[180px]">[FOTO: sesión de kinesiología]</div>
-            <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
-              <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 01</p>
-              <h3 class="text-xl font-extrabold leading-[1.2]">Kinesiología traumatológica</h3>
-              <p class="text-[15px] text-kio-texto">Lesiones, esguinces, fracturas y posoperatorios con un plan personalizado.</p>
+          <div data-pista tabindex="0" aria-label="Servicios: deslizá o usá las flechas del teclado"
+            class="pista-carrusel rail flex snap-x snap-mandatory gap-3.5 overflow-x-auto rounded-card md:grid md:grid-cols-2 md:snap-none md:gap-5 md:overflow-visible lg:grid-cols-3 lg:gap-6">
+            <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 1 de 6"
+              class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
+              <img src="assets/img/servicio-kinesiologia.jpg"
+                alt="Kinesióloga trabajando sobre el tobillo de un paciente en camilla" width="1280" height="720"
+                loading="lazy" decoding="async" class="h-[200px] w-full object-cover md:h-[180px]">
+              <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
+                <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 01</p>
+                <h3 class="text-xl font-extrabold leading-[1.2]">Kinesiología traumatológica</h3>
+                <p class="text-[15px] text-kio-texto">Lesiones, esguinces, fracturas y posoperatorios con un plan
+                  personalizado.</p>
+              </div>
+            </div>
+            <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 2 de 6"
+              class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
+              <img src="assets/img/servicio-traumatologia.jpg"
+                alt="Traumatólogo evaluando el brazo de un paciente junto a una radiografía" width="1280" height="720"
+                loading="lazy" decoding="async" class="h-[200px] w-full object-cover md:h-[180px]">
+              <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
+                <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 02</p>
+                <h3 class="text-xl font-extrabold leading-[1.2]">Consultas de traumatología</h3>
+                <p class="text-[15px] text-kio-texto">Evaluación y diagnóstico para definir tu tratamiento.</p>
+              </div>
+            </div>
+            <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 3 de 6"
+              class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
+              <img src="assets/img/servicio-rehabilitacion.jpg"
+                alt="Paciente haciendo un ejercicio de equilibrio sobre una tabla, con la guía de una kinesióloga"
+                width="1280" height="720" loading="lazy" decoding="async"
+                class="h-[200px] w-full object-cover md:h-[180px]">
+              <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
+                <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 03</p>
+                <h3 class="text-xl font-extrabold leading-[1.2]">Rehabilitación funcional</h3>
+                <p class="text-[15px] text-kio-texto">Recuperá fuerza, movilidad y confianza para tu día a día.</p>
+              </div>
+            </div>
+            <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 4 de 6"
+              class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
+              <img src="assets/img/servicio-rpg.jpg"
+                alt="Kinesióloga trabajando el cuello de una paciente recostada en camilla" width="1280" height="720"
+                loading="lazy" decoding="async" class="h-[200px] w-full object-cover md:h-[180px]">
+              <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
+                <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 04</p>
+                <h3 class="text-xl font-extrabold leading-[1.2]">RPG</h3>
+                <p class="text-[15px] text-kio-texto">Reeducación postural global para espalda, cuello y postura.</p>
+              </div>
+            </div>
+            <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 5 de 6"
+              class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
+              <img src="assets/img/servicio-gimnasio.jpg"
+                alt="Gimnasio de rehabilitación luminoso, con espaldera, pelotas y bicicleta" width="1280" height="720"
+                loading="lazy" decoding="async" class="h-[200px] w-full object-cover md:h-[180px]">
+              <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
+                <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 05</p>
+                <h3 class="text-xl font-extrabold leading-[1.2]">Gimnasio de rehabilitación</h3>
+                <p class="text-[15px] text-kio-texto">Trabajo progresivo y supervisado para prevenir nuevas lesiones.
+                </p>
+              </div>
+            </div>
+            <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 6 de 6"
+              class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
+              <img src="assets/img/servicio-fisioterapia.jpg"
+                alt="Aplicación de ultrasonido en la rodilla de un paciente" width="1280" height="720" loading="lazy"
+                decoding="async" class="h-[200px] w-full object-cover md:h-[180px]">
+              <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
+                <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 06</p>
+                <h3 class="text-xl font-extrabold leading-[1.2]">Fisioterapia</h3>
+                <p class="text-[15px] text-kio-texto">Magnetoterapia, ultrasonido y ondas de choque.</p>
+              </div>
             </div>
           </div>
-          <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 2 de 6" class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
-            <div data-pendiente class="ph h-[200px] md:h-[180px]">[FOTO: consultorio]</div>
-            <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
-              <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 02</p>
-              <h3 class="text-xl font-extrabold leading-[1.2]">Consultas de traumatología</h3>
-              <p class="text-[15px] text-kio-texto">Evaluación y diagnóstico para definir tu tratamiento.</p>
-            </div>
-          </div>
-          <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 3 de 6" class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
-            <div data-pendiente class="ph h-[200px] md:h-[180px]">[FOTO: ejercicio funcional]</div>
-            <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
-              <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 03</p>
-              <h3 class="text-xl font-extrabold leading-[1.2]">Rehabilitación funcional</h3>
-              <p class="text-[15px] text-kio-texto">Recuperá fuerza, movilidad y confianza para tu día a día.</p>
-            </div>
-          </div>
-          <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 4 de 6" class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
-            <div data-pendiente class="ph h-[200px] md:h-[180px]">[FOTO: sesión de RPG]</div>
-            <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
-              <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 04</p>
-              <h3 class="text-xl font-extrabold leading-[1.2]">RPG</h3>
-              <p class="text-[15px] text-kio-texto">Reeducación postural global para espalda, cuello y postura.</p>
-            </div>
-          </div>
-          <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 5 de 6" class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
-            <div data-pendiente class="ph h-[200px] md:h-[180px]">[FOTO: gimnasio]</div>
-            <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
-              <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 05</p>
-              <h3 class="text-xl font-extrabold leading-[1.2]">Gimnasio de rehabilitación</h3>
-              <p class="text-[15px] text-kio-texto">Trabajo progresivo y supervisado para prevenir nuevas lesiones.</p>
-            </div>
-          </div>
-          <div role="group" aria-roledescription="diapositiva" aria-label="Servicio 6 de 6" class="slide-carrusel flex w-full flex-none snap-start snap-always flex-col overflow-hidden rounded-card border border-kio-borde bg-white md:w-auto">
-            <div data-pendiente class="ph h-[200px] md:h-[180px]">[FOTO: aparatología]</div>
-            <div class="flex flex-col gap-2 px-5 pb-[22px] pt-[18px]">
-              <p class="text-xs font-extrabold tracking-[0.12em] text-kio-terracota">SERVICIO 06</p>
-              <h3 class="text-xl font-extrabold leading-[1.2]">Fisioterapia</h3>
-              <p class="text-[15px] text-kio-texto">Magnetoterapia, ultrasonido y ondas de choque.</p>
-            </div>
-          </div>
-          </div>
-        <button type="button" data-prev aria-label="Servicio anterior" class="carrusel-ctrl absolute top-[100px] left-0 -translate-x-1/2 z-10 h-[30px] w-[30px] -translate-y-1/2 items-center justify-center rounded-full bg-kio-terracota text-white shadow-float transition duration-150 before:absolute before:-inset-y-[7px] before:-right-[14px] before:left-0 before:content-[''] hover:bg-kio-terracota-oscuro active:scale-95 md:hidden">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
-        </button>
-        <button type="button" data-next aria-label="Servicio siguiente" class="carrusel-ctrl absolute top-[100px] right-0 translate-x-1/2 z-10 h-[30px] w-[30px] -translate-y-1/2 items-center justify-center rounded-full bg-kio-terracota text-white shadow-float transition duration-150 before:absolute before:-inset-y-[7px] before:-left-[14px] before:right-0 before:content-[''] hover:bg-kio-terracota-oscuro active:scale-95 md:hidden">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-        </button>
+          <button type="button" data-prev aria-label="Servicio anterior"
+            class="carrusel-ctrl absolute top-[100px] left-0 -translate-x-1/2 z-10 h-[30px] w-[30px] -translate-y-1/2 items-center justify-center rounded-full bg-kio-terracota text-white shadow-float transition duration-150 before:absolute before:-inset-y-[7px] before:-right-[14px] before:left-0 before:content-[''] hover:bg-kio-terracota-oscuro active:scale-95 md:hidden">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button type="button" data-next aria-label="Servicio siguiente"
+            class="carrusel-ctrl absolute top-[100px] right-0 translate-x-1/2 z-10 h-[30px] w-[30px] -translate-y-1/2 items-center justify-center rounded-full bg-kio-terracota text-white shadow-float transition duration-150 before:absolute before:-inset-y-[7px] before:-left-[14px] before:right-0 before:content-[''] hover:bg-kio-terracota-oscuro active:scale-95 md:hidden">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
 
         <p class="hint-sin-js flex items-center gap-2 text-[13px] text-kio-texto-suave md:hidden">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m13 6 6 6-6 6" />
+          </svg>
           <span>Deslizá para ver los 6 servicios</span>
         </p>
         <p data-contador class="carrusel-ctrl justify-center text-sm font-bold text-kio-texto md:hidden">1 / 6</p>
@@ -231,25 +316,44 @@
       <div class="wrap grid gap-5 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-8">
         <div class="flex flex-col gap-5 lg:col-start-1 lg:row-start-1">
           <p class="eyebrow text-kio-rosa">Tecnología</p>
-          <h2 id="tecnologia-titulo" class="h2">Módulo de <span class="text-kio-rosa">rehabilitación avanzada</span></h2>
-          <p class="text-base text-kio-texto-claro md:text-lg">Sistema súper inductivo BTL: estimulación electromagnética que acelera la recuperación.</p>
+          <h2 id="tecnologia-titulo" class="h2">Módulo de <span class="text-kio-rosa">rehabilitación avanzada</span>
+          </h2>
+          <p class="text-base text-kio-texto-claro md:text-lg">Sistema súper inductivo BTL: estimulación
+            electromagnética que acelera la recuperación.</p>
         </div>
-        <div data-pendiente class="ph h-60 rounded-card bg-kio-negro-3 !text-kio-texto-claro md:h-80 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-auto lg:min-h-[420px]">[FOTO: equipo BTL en uso]</div>
+        <div
+          class="relative h-60 overflow-hidden rounded-card bg-kio-negro-3 md:h-80 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-auto lg:min-h-[420px]">
+          <img src="assets/img/tecnologia-equipo.jpg"
+            alt="Paciente recibiendo un tratamiento con equipo de rehabilitación avanzada" width="1260" height="840"
+            loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover">
+        </div>
         <ul class="flex list-none flex-col gap-2.5 lg:col-start-1 lg:row-start-2">
           <li class="chip-check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa"><path d="M20 6 9 17l-5-5" /></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
             <span>Dolor agudo y crónico</span>
           </li>
           <li class="chip-check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa"><path d="M20 6 9 17l-5-5" /></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
             <span>Desinflamación del tejido profundo</span>
           </li>
           <li class="chip-check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa"><path d="M20 6 9 17l-5-5" /></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
             <span>Estimulación muscular</span>
           </li>
           <li class="chip-check">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa"><path d="M20 6 9 17l-5-5" /></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-rosa">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
             <span>Bloqueos articulares</span>
           </li>
         </ul>
@@ -261,7 +365,8 @@
       <div class="wrap flex flex-col gap-5 lg:gap-10">
         <div class="flex max-w-2xl flex-col gap-3">
           <p class="eyebrow">Un espacio integral</p>
-          <h2 id="especialidades-titulo" class="h2">Tres especialidades, <span class="destacado">un mismo lugar</span></h2>
+          <h2 id="especialidades-titulo" class="h2">Tres especialidades, <span class="destacado">un mismo lugar</span>
+          </h2>
         </div>
 
         <div class="grid gap-5 lg:grid-cols-3 lg:gap-6">
@@ -271,11 +376,24 @@
               <p class="font-semibold text-kio-texto">Kinesiología y traumatología</p>
             </div>
             <ul class="flex list-none flex-col gap-2 text-[15px] text-kio-texto">
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Prepagas y particulares</li>
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Consultorios y gimnasio de rehabilitación</li>
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>RPG y fisioterapia</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Prepagas y particulares</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Consultorios y gimnasio de rehabilitación</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>RPG y fisioterapia</li>
             </ul>
-            <a href="https://kiosalud.geblix.com" class="btn-primario mt-auto !min-h-[48px] !text-base">Sacá tu turno</a>
+            <a href="https://kiosalud.geblix.com" class="btn-primario mt-auto !min-h-[48px] !text-base">Sacá tu
+              turno</a>
           </article>
 
           <article class="marca marca-icuo flex flex-col gap-3.5 rounded-card border border-kio-borde-2 bg-white p-6">
@@ -284,11 +402,25 @@
               <p class="font-semibold text-kio-texto">Rehabilitación integrada</p>
             </div>
             <ul class="flex list-none flex-col gap-2 text-[15px] text-kio-texto">
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Tecnología avanzada y plan personalizado</li>
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Para la vida cotidiana y el deporte</li>
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Experiencia con bailarines del Teatro Colón</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Tecnología avanzada y plan personalizado</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Para la vida cotidiana y el deporte</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Experiencia con bailarines del Teatro Colón</li>
             </ul>
-            <a href="https://www.instagram.com/icuokinesiologia" class="btn-secundario mt-auto !min-h-[48px] !text-base"><span>Conocé <span class="text-kio-icuo">ICUO</span></span></a>
+            <a href="https://www.instagram.com/icuokinesiologia"
+              class="btn-secundario mt-auto !min-h-[48px] !text-base"><span>Conocé <span
+                  class="text-kio-icuo">ICUO</span></span></a>
           </article>
 
           <article class="marca marca-onyra flex flex-col gap-3.5 rounded-card border border-kio-borde-2 bg-white p-6">
@@ -297,12 +429,26 @@
               <p class="font-semibold text-kio-texto">Medicina del sueño</p>
             </div>
             <ul class="flex list-none flex-col gap-2 text-[15px] text-kio-texto">
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Evaluación de ronquidos y apnea</li>
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Nutrición y fonoaudiología</li>
-              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 6 9 17l-5-5" /></svg>Tratamiento integral del sueño</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Evaluación de ronquidos y apnea</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Nutrición y fonoaudiología</li>
+              <li class="flex gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                  class="mt-0.5 flex-none text-kio-terracota">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>Tratamiento integral del sueño</li>
             </ul>
             <!-- [Completar: link de onyrA] — mientras no haya dato, el botón apunta a esta misma sección -->
-            <a data-pendiente href="#especialidades" class="btn-secundario mt-auto !min-h-[48px] !text-base"><span>Conocé <span class="text-kio-onyra">onyrA</span></span></a>
+            <a data-pendiente href="#especialidades"
+              class="btn-secundario mt-auto !min-h-[48px] !text-base"><span>Conocé <span
+                  class="text-kio-onyra">onyrA</span></span></a>
           </article>
         </div>
       </div>
@@ -314,33 +460,38 @@
         <div class="flex flex-col gap-4 lg:sticky lg:top-28 lg:self-start">
           <p class="eyebrow">Turnos</p>
           <h2 id="turnos-titulo" class="h2">Sacá tu turno <span class="destacado">en minutos</span></h2>
-          <a href="https://kiosalud.geblix.com" class="btn-primario mt-2 hidden self-start px-8 lg:inline-flex">Ir al portal de turnos</a>
+          <a href="https://kiosalud.geblix.com" class="btn-primario mt-2 hidden self-start px-8 lg:inline-flex">Ir al
+            portal de turnos</a>
         </div>
 
         <ol class="mt-1 flex list-none flex-col lg:mt-0">
           <li class="flex gap-4 border-b border-kio-borde py-[18px]">
-            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota" aria-hidden="true">01</span>
+            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota"
+              aria-hidden="true">01</span>
             <div class="flex flex-col gap-0.5">
               <h3 class="text-lg font-extrabold"><span class="sr-only">Paso 1: </span>Entrá al portal</h3>
               <p class="text-[15px] text-kio-texto">kiosalud.geblix.com, desde el celular o la compu.</p>
             </div>
           </li>
           <li class="flex gap-4 border-b border-kio-borde py-[18px]">
-            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota" aria-hidden="true">02</span>
+            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota"
+              aria-hidden="true">02</span>
             <div class="flex flex-col gap-0.5">
               <h3 class="text-lg font-extrabold"><span class="sr-only">Paso 2: </span>Registrate una sola vez</h3>
               <p class="text-[15px] text-kio-texto">Con tu nombre, DNI y celular.</p>
             </div>
           </li>
           <li class="flex gap-4 border-b border-kio-borde py-[18px]">
-            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota" aria-hidden="true">03</span>
+            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota"
+              aria-hidden="true">03</span>
             <div class="flex flex-col gap-0.5">
               <h3 class="text-lg font-extrabold"><span class="sr-only">Paso 3: </span>Elegí día y horario</h3>
               <p class="text-[15px] text-kio-texto">La especialidad y el turno que mejor te quede.</p>
             </div>
           </li>
           <li class="flex gap-4 border-b border-kio-borde py-[18px]">
-            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota" aria-hidden="true">04</span>
+            <span class="w-9 flex-none text-2xl font-extrabold leading-[1.2] text-kio-terracota"
+              aria-hidden="true">04</span>
             <div class="flex flex-col gap-0.5">
               <h3 class="text-lg font-extrabold"><span class="sr-only">Paso 4: </span>¿No podés venir? Cancelalo</h3>
               <p class="text-[15px] text-kio-texto">Con tu DNI, y liberás el turno para otro paciente.</p>
@@ -358,27 +509,58 @@
         <div class="flex flex-col gap-3 lg:col-start-1 lg:row-start-1">
           <p class="eyebrow">Nos mudamos</p>
           <h2 id="sede-titulo" class="h2">Conocé nuestra <span class="destacado">nueva sede</span></h2>
-          <p class="text-base text-kio-texto md:text-lg">Un espacio amplio y todo nuevo. Antes estábamos en Maipú 1669.</p>
+          <p class="text-base text-kio-texto md:text-lg">Un espacio amplio y todo nuevo. Antes estábamos en Maipú 1669.
+          </p>
         </div>
 
-        <div data-pendiente class="ph h-[220px] rounded-card bg-kio-arena-2 md:h-[320px] lg:col-start-2 lg:row-span-3 lg:row-start-1 lg:h-auto lg:min-h-[420px]">[MAPA: Av. Maipú 1736]</div>
+        <div
+          class="relative h-[220px] overflow-hidden rounded-card bg-kio-arena-2 md:h-[320px] lg:col-start-2 lg:row-span-3 lg:row-start-1 lg:h-auto lg:min-h-[420px]">
+          <!-- Mapa solo de referencia: sin interacción para no atrapar el scroll en mobile. Para abrirlo está el botón "Abrir en Google Maps" -->
+          <iframe
+            src="https://maps.google.com/maps?q=Av.+Maip%C3%BA+1736,+Vicente+L%C3%B3pez,+Buenos+Aires&amp;z=16&amp;output=embed"
+            title="Mapa con la ubicación de KIO: Av. Maipú 1736, Vicente López" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" tabindex="-1"
+            class="pointer-events-none absolute inset-0 h-full w-full border-0"></iframe>
+        </div>
 
         <ul class="flex list-none flex-col rounded-[18px] bg-white px-[18px] py-1.5 lg:col-start-1 lg:row-start-2">
           <li class="flex items-start gap-3 border-b border-kio-borde py-3.5">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
-            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Av. Maipú 1736, 1er subsuelo</span><span class="text-sm text-kio-texto">Dentro de COTO · Vicente López</span></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              class="mt-0.5 flex-none text-kio-terracota">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Av. Maipú 1736, 1er
+                subsuelo</span><span class="text-sm text-kio-texto">Dentro de COTO · Vicente López</span></div>
           </li>
           <li class="flex items-start gap-3 border-b border-kio-borde py-3.5">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
-            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Horarios</span><span class="text-sm text-kio-texto">Lun a Vie 8–20 h · Sáb 8:30–12:30 h</span></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              class="mt-0.5 flex-none text-kio-terracota">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Horarios</span><span
+                class="text-sm text-kio-texto">Lun a Vie 8–20 h · Sáb 8:30–12:30 h</span></div>
           </li>
           <li class="flex items-start gap-3 py-3.5">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none text-kio-terracota"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 11v6h14v-6" /><circle cx="8" cy="19" r="1.5" /><circle cx="16" cy="19" r="1.5" /></svg>
-            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Cómo llegar</span><span data-pendiente class="text-sm text-kio-texto">[Completar: colectivos, tren, estacionamiento]</span></div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              class="mt-0.5 flex-none text-kio-terracota">
+              <path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 11v6h14v-6" />
+              <circle cx="8" cy="19" r="1.5" />
+              <circle cx="16" cy="19" r="1.5" />
+            </svg>
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Cómo llegar</span><span
+                data-pendiente class="text-sm text-kio-texto">[Completar: colectivos, tren, estacionamiento]</span>
+            </div>
           </li>
         </ul>
 
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Maip%C3%BA+1736+Vicente+L%C3%B3pez" class="btn-secundario !min-h-[48px] !text-base lg:col-start-1 lg:row-start-3 lg:self-start lg:px-8">Abrir en Google Maps</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Maip%C3%BA+1736+Vicente+L%C3%B3pez"
+          class="btn-secundario !min-h-[48px] !text-base lg:col-start-1 lg:row-start-3 lg:self-start lg:px-8">Abrir en
+          Google Maps</a>
       </div>
     </section>
 
@@ -392,20 +574,32 @@
 
         <ul class="rail-snap list-none md:grid md:grid-cols-4 md:gap-5 lg:gap-6">
           <li class="flex w-[200px] flex-none snap-start flex-col gap-2.5 md:w-auto">
-            <div data-pendiente class="ph h-60 rounded-[20px] md:h-auto md:aspect-[5/6]">[FOTO]</div>
-            <div class="flex flex-col leading-[1.35]"><span data-pendiente class="font-extrabold">[Nombre y apellido]</span><span class="text-sm text-kio-texto">Traumatología</span></div>
+            <img src="assets/img/equipo-1.jpg" alt="Dr. Martín Gómez, especialista en traumatología" width="800"
+              height="960" loading="lazy" decoding="async"
+              class="h-60 w-full rounded-[20px] bg-kio-arena object-cover object-top md:h-auto md:aspect-[5/6]">
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Dr. Martín Gómez</span><span
+                class="text-sm text-kio-texto">Traumatología</span></div>
           </li>
           <li class="flex w-[200px] flex-none snap-start flex-col gap-2.5 md:w-auto">
-            <div data-pendiente class="ph h-60 rounded-[20px] md:h-auto md:aspect-[5/6]">[FOTO]</div>
-            <div class="flex flex-col leading-[1.35]"><span data-pendiente class="font-extrabold">[Nombre y apellido]</span><span class="text-sm text-kio-texto">Kinesiología</span></div>
+            <img src="assets/img/equipo-2.jpg" alt="Lic. Federico Álvarez, especialista en kinesiología" width="800"
+              height="960" loading="lazy" decoding="async"
+              class="h-60 w-full rounded-[20px] bg-kio-arena object-cover object-top md:h-auto md:aspect-[5/6]">
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Lic. Federico Álvarez</span><span
+                class="text-sm text-kio-texto">Kinesiología</span></div>
           </li>
           <li class="flex w-[200px] flex-none snap-start flex-col gap-2.5 md:w-auto">
-            <div data-pendiente class="ph h-60 rounded-[20px] md:h-auto md:aspect-[5/6]">[FOTO]</div>
-            <div class="flex flex-col leading-[1.35]"><span data-pendiente class="font-extrabold">[Nombre y apellido]</span><span class="text-sm text-kio-texto">Kinesiología · RPG</span></div>
+            <img src="assets/img/equipo-3.jpg" alt="Lic. Mariana Rossi, especialista en kinesiología y RPG" width="800"
+              height="960" loading="lazy" decoding="async"
+              class="h-60 w-full rounded-[20px] bg-kio-arena object-cover object-top md:h-auto md:aspect-[5/6]">
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Lic. Mariana Rossi</span><span
+                class="text-sm text-kio-texto">Kinesiología · RPG</span></div>
           </li>
           <li class="flex w-[200px] flex-none snap-start flex-col gap-2.5 md:w-auto">
-            <div data-pendiente class="ph h-60 rounded-[20px] md:h-auto md:aspect-[5/6]">[FOTO]</div>
-            <div class="flex flex-col leading-[1.35]"><span data-pendiente class="font-extrabold">[Nombre y apellido]</span><span class="text-sm text-kio-texto">Gimnasio de rehabilitación</span></div>
+            <img src="assets/img/equipo-4.jpg" alt="Lic. Sofía Morales, especialista en gimnasio de rehabilitación"
+              width="800" height="960" loading="lazy" decoding="async"
+              class="h-60 w-full rounded-[20px] bg-kio-arena object-cover object-top md:h-auto md:aspect-[5/6]">
+            <div class="flex flex-col leading-[1.35]"><span class="font-extrabold">Lic. Sofía Morales</span><span
+                class="text-sm text-kio-texto">Gimnasio de rehabilitación</span></div>
           </li>
         </ul>
       </div>
@@ -421,39 +615,70 @@
 
         <div class="flex flex-col gap-2.5">
           <details class="group rounded-2xl bg-white" open>
-            <summary class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
+            <summary
+              class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
               ¿Cómo saco o cancelo un turno?
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </summary>
-            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Desde kiosalud.geblix.com. Te registrás una vez con nombre, DNI y celular, y después reservás o cancelás con tu DNI.</p>
+            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Desde kiosalud.geblix.com. Te registrás una vez con
+              nombre, DNI y celular, y después reservás o cancelás con tu DNI.</p>
           </details>
           <details class="group rounded-2xl bg-white">
-            <summary class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
+            <summary
+              class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
               ¿Atienden por prepaga?
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </summary>
-            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Sí, y también en forma particular. <span data-pendiente>[Completar lista de prepagas.]</span></p>
+            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Sí, y también en forma particular. <span
+                data-pendiente>[Completar lista de prepagas.]</span></p>
           </details>
           <details class="group rounded-2xl bg-white">
-            <summary class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
+            <summary
+              class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
               ¿Dónde queda la nueva sede?
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </summary>
-            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Av. Maipú 1736, primer subsuelo, dentro de COTO, Vicente López.</p>
+            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Av. Maipú 1736, primer subsuelo, dentro de COTO,
+              Vicente López.</p>
           </details>
           <details class="group rounded-2xl bg-white">
-            <summary class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
+            <summary
+              class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
               ¿Puedo consultar por WhatsApp?
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </summary>
-            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Sí, al <a href="https://wa.me/5491162567798" class="font-bold text-kio-terracota underline underline-offset-2 hover:text-kio-terracota-oscuro">11 6256-7798</a>, solo por mensaje de texto.</p>
+            <p class="px-5 pb-[18px] text-[15px] text-kio-texto">Sí, al <a href="https://wa.me/5491162567798"
+                class="font-bold text-kio-terracota underline underline-offset-2 hover:text-kio-terracota-oscuro">11
+                6256-7798</a>, solo por mensaje de texto.</p>
           </details>
           <details class="group rounded-2xl bg-white">
-            <summary class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
+            <summary
+              class="flex min-h-[56px] cursor-pointer items-center justify-between gap-4 px-5 py-[18px] text-[17px] font-extrabold">
               ¿Qué traigo a la primera sesión?
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180"><path d="m6 9 6 6 6-6" /></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="flex-none text-kio-terracota transition-transform duration-200 group-open:rotate-180">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </summary>
-            <p data-pendiente class="px-5 pb-[18px] text-[15px] text-kio-texto">[Completar: orden médica, credencial, estudios, ropa cómoda.]</p>
+            <p data-pendiente class="px-5 pb-[18px] text-[15px] text-kio-texto">[Completar: orden médica, credencial,
+              estudios, ropa cómoda.]</p>
           </details>
         </div>
       </div>
@@ -462,11 +687,13 @@
     <!-- Sección: CTA final -->
     <section id="cta" aria-labelledby="cta-titulo" class="on-dark bg-kio-terracota py-12 text-white md:py-16">
       <div class="wrap flex flex-col gap-4 md:items-center md:text-center">
-        <h2 id="cta-titulo" class="text-3xl font-extrabold leading-[1.12] md:text-4xl lg:text-5xl">Cuidarte es un hábito diario.</h2>
+        <h2 id="cta-titulo" class="text-3xl font-extrabold leading-[1.12] md:text-4xl lg:text-5xl">Cuidarte es un hábito
+          diario.</h2>
         <p class="text-base text-kio-terracota-texto md:text-lg">Reservá tu turno online en menos de dos minutos.</p>
         <div class="flex flex-col gap-2.5 md:mt-2 md:flex-row md:gap-3">
           <a href="https://kiosalud.geblix.com" class="btn-blanco md:px-10">Sacá tu turno</a>
-          <a href="https://wa.me/5491162567798" class="btn-blanco-borde hidden md:inline-flex md:px-10">Escribinos por WhatsApp</a>
+          <a href="https://wa.me/5491162567798" class="btn-blanco-borde hidden md:inline-flex md:px-10">Escribinos por
+            WhatsApp</a>
         </div>
       </div>
     </section>
@@ -480,30 +707,52 @@
 
         <!-- Marca -->
         <div class="flex flex-col gap-4">
-          <a href="#inicio" class="flex min-h-[44px] items-center gap-3 self-start" aria-label="KIO Espacio de Salud, ir al inicio">
-            <img src="assets/img/isotipo.png" alt="" width="36" height="40" loading="lazy" class="h-10 w-auto brightness-0 invert">
+          <a href="#inicio" class="flex min-h-[44px] items-center gap-3 self-start"
+            aria-label="KIO Espacio de Salud, ir al inicio">
+            <img src="assets/img/isotipo.png" alt="" width="36" height="40" loading="lazy"
+              class="h-10 w-auto brightness-0 invert">
             <span class="flex flex-col leading-none">
               <span class="text-2xl font-extrabold tracking-[0.04em] text-white">KIO</span>
               <span class="mt-1 text-[10px] font-bold tracking-[0.18em] text-kio-texto-claro-2">ESPACIO DE SALUD</span>
             </span>
           </a>
-          <p class="max-w-xs">Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares.</p>
-          <p data-pendiente class="max-w-xs text-[13px] text-kio-texto-claro-2">[Completar: habilitación del Ministerio de Salud]</p>
+          <p class="max-w-xs">Kinesiología, traumatología y rehabilitación en Vicente López. Prepagas y particulares.
+          </p>
+          <p data-pendiente class="max-w-xs text-[13px] text-kio-texto-claro-2">[Completar: habilitación del Ministerio
+            de Salud]</p>
         </div>
 
         <!-- Navegación -->
         <nav aria-labelledby="footer-nav">
           <h2 id="footer-nav" class="text-sm font-extrabold uppercase tracking-[0.12em] text-white">Navegación</h2>
           <ul class="mt-3 grid list-none grid-cols-2 gap-x-4 lg:grid-cols-1">
-          <li><a href="#servicios" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Servicios</a></li>
-          <li><a href="#tecnologia" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Tecnología</a></li>
-          <li><a href="#especialidades" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Especialidades</a></li>
-          <li><a href="#prepagas" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Prepagas</a></li>
-          <li><a href="#turnos" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Cómo sacar turno</a></li>
-          <li><a href="#sede" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">La sede</a></li>
-          <li><a href="#equipo" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Equipo</a></li>
-          <li><a href="#preguntas" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Preguntas frecuentes</a></li>
-          <li><a href="https://kiosalud.geblix.com" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Mis turnos</a></li>
+            <li><a href="#servicios"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Servicios</a>
+            </li>
+            <li><a href="#tecnologia"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Tecnología</a>
+            </li>
+            <li><a href="#especialidades"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Especialidades</a>
+            </li>
+            <li><a href="#prepagas"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Prepagas</a>
+            </li>
+            <li><a href="#turnos"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Cómo
+                sacar turno</a></li>
+            <li><a href="#sede"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">La
+                sede</a></li>
+            <li><a href="#equipo"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Equipo</a>
+            </li>
+            <li><a href="#preguntas"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Preguntas
+                frecuentes</a></li>
+            <li><a href="https://kiosalud.geblix.com"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Mis
+                turnos</a></li>
           </ul>
         </nav>
 
@@ -511,8 +760,15 @@
         <div>
           <h2 class="text-sm font-extrabold uppercase tracking-[0.12em] text-white">La sede</h2>
           <ul class="mt-3 flex list-none flex-col gap-1">
-            <li class="flex items-start gap-2.5 py-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg><span>Av. Maipú 1736, 1er subsuelo<br>Dentro de COTO · Vicente López</span></li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Maip%C3%BA+1736+Vicente+L%C3%B3pez" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Cómo llegar</a></li>
+            <li class="flex items-start gap-2.5 py-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="mt-0.5 flex-none">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg><span>Av. Maipú 1736, 1er subsuelo<br>Dentro de COTO · Vicente López</span></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Maip%C3%BA+1736+Vicente+L%C3%B3pez"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]">Cómo
+                llegar</a></li>
           </ul>
         </div>
 
@@ -520,15 +776,34 @@
         <div>
           <h2 class="text-sm font-extrabold uppercase tracking-[0.12em] text-white">Contacto</h2>
           <ul class="mt-3 flex list-none flex-col gap-1">
-            <li><a href="https://wa.me/5491162567798" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z" /></svg><span>WhatsApp 11 6256-7798<span class="block text-[13px] text-kio-texto-claro-2">Solo mensajes de texto</span></span></a></li>
-            <li><a href="https://www.instagram.com/kio_salud" class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" /></svg><span>Instagram @kio_salud</span></a></li>
-            <li class="flex items-start gap-2.5 py-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 flex-none"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg><span>Lun a Vie 8–20 h<br>Sáb 8:30–12:30 h</span></li>
+            <li><a href="https://wa.me/5491162567798"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]"><svg
+                  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z" />
+                </svg><span>WhatsApp 11 6256-7798<span class="block text-[13px] text-kio-texto-claro-2">Solo mensajes de
+                    texto</span></span></a></li>
+            <li><a href="https://www.instagram.com/kio_salud"
+                class="inline-flex min-h-[44px] items-center gap-2.5 hover:text-white hover:underline lg:min-h-[32px]"><svg
+                  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="flex-none">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+                </svg><span>Instagram @kio_salud</span></a></li>
+            <li class="flex items-start gap-2.5 py-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="mt-0.5 flex-none">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg><span>Lun a Vie 8–20 h<br>Sáb 8:30–12:30 h</span></li>
           </ul>
           <a href="https://kiosalud.geblix.com" class="btn-primario mt-4 !min-h-[48px] !text-base">Sacá tu turno</a>
         </div>
       </div>
 
-      <p class="mt-10 border-t border-kio-linea-oscura pt-6 text-[13px] text-kio-texto-claro-2">© <span data-anio>2026</span> KIO S.R.L.</p>
+      <p class="mt-10 border-t border-kio-linea-oscura pt-6 text-[13px] text-kio-texto-claro-2">© <span
+          data-anio>2026</span> KIO S.R.L.</p>
     </div>
   </footer>
 

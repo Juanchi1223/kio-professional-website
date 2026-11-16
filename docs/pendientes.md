@@ -6,21 +6,11 @@ Todos los placeholders están visibles en `index.html` y marcados con `data-pend
 
 | Sección (`id`) | Placeholder | Qué falta |
 |---|---|---|
-| `<head>` | `[Completar: og:image y og:url]` | Imagen 1200×630 para compartir y URL final del sitio |
-| Hero (`#inicio`) | `[FOTO VERTICAL: paciente entrenando en el gimnasio de la sede nueva]` | Foto vertical del gimnasio |
+| `<head>` | `og:url` y `og:image` absoluta | `og:image` ya apunta a `assets/img/og/og-kio.jpg` (relativa); falta el dominio para `og:url` y para pasarla a URL absoluta, que es lo que exigen las redes |
 | Prepagas (`#prepagas`) | Otras prepagas | Faltan los logos de las demás (hoy solo OSDE y Swiss Medical). Se suman con un `<li>` + `<img class="logo-prepaga">` en `assets/img/prepagas/` |
-| Servicios (`#servicios`) | `[FOTO: sesión de kinesiología]` | Foto servicio 01 |
-| Servicios | `[FOTO: consultorio]` | Foto servicio 02 |
-| Servicios | `[FOTO: ejercicio funcional]` | Foto servicio 03 |
-| Servicios | `[FOTO: sesión de RPG]` | Foto servicio 04 |
-| Servicios | `[FOTO: gimnasio]` | Foto servicio 05 |
-| Servicios | `[FOTO: aparatología]` | Foto servicio 06 |
-| Tecnología (`#tecnologia`) | `[FOTO: equipo BTL en uso]` | Foto del equipo BTL |
 | Especialidades (`#especialidades`) | `[Completar: link de onyrA]` | URL del botón "Conocé onyrA" (hoy apunta a la misma sección) |
-| Sede (`#sede`) | `[MAPA: Av. Maipú 1736]` | Mapa o imagen del mapa (no se inventó un embed) |
 | Sede | `[Completar: colectivos, tren, estacionamiento]` | Cómo llegar |
-| Equipo (`#equipo`) | `[FOTO]` ×4 | Fotos de los profesionales |
-| Equipo | `[Nombre y apellido]` ×4 | Nombres (Traumatología, Kinesiología, Kinesiología · RPG, Gimnasio de rehabilitación) |
+| Equipo (`#equipo`) | Fotos y nombres de los 4 profesionales | Hay fotos (`equipo-1` a `equipo-4`) y nombres cargados (Dr. Martín Gómez, Lic. Federico Álvarez, Lic. Mariana Rossi, Lic. Sofía Morales) que **no figuran en los datos del negocio**. Confirmar que sean los profesionales reales de KIO y que tengan su consentimiento; si no, reemplazar |
 | Preguntas frecuentes (`#preguntas`) | `[Completar lista de prepagas.]` | Lista de prepagas |
 | Preguntas frecuentes | `[Completar: orden médica, credencial, estudios, ropa cómoda.]` | Qué traer a la primera sesión |
 
@@ -37,7 +27,7 @@ Todos los placeholders están visibles en `index.html` y marcados con `data-pend
 ## Otros pendientes
 
 - Logotipo completo vectorial con la bajada "ESPACIO DE SALUD" (hoy el wordmark es texto junto al isotipo).
-- Favicon: se generó desde el isotipo (`assets/img/favicon-32.png`, `apple-touch-icon.png`); falta un `.ico` si lo quieren.
+- Favicon: se generó desde el isotipo (`assets/img/marca/favicon-32.png`, `marca/apple-touch-icon.png`); falta un `.ico` si lo quieren.
 - Dominio y hosting; después completar `og:url` y `og:image`.
 
 ## Footer: elementos de la referencia que no se incluyeron (sin datos)
@@ -47,3 +37,11 @@ Todos los placeholders están visibles en `index.html` y marcados con `data-pend
 - Páginas legales (Términos de Atención, Privacidad Médica) y Canal de Pacientes: no existen; se suman cuando haya contenido y destino.
 - Facebook `/kiocentro` (de la marca anterior): confirmar si se incluye junto a Instagram.
 - El isotipo del footer va en blanco (versión monocroma) porque la parte negra no se ve sobre fondo oscuro; confirmar o pasar una versión para fondo oscuro.
+
+## Fotos cargadas (revisar con KIO)
+
+- Se usan `hero-gimnasio.jpg`, las 6 `servicio-*.jpg`, `tecnologia-equipo.jpg` y `og-kio.jpg`. `tecnologia-equipo-alt.jpg` quedó sin usar.
+- Confirmar que las fotos puedan publicarse (derechos y consentimiento de las personas) y que muestren el equipamiento y las instalaciones reales, en especial la de Tecnología, que se presenta como el sistema BTL.
+- Los `alt` están escritos a partir de lo que se ve en cada imagen; ajustarlos si cambian las fotos.
+- No quedan placeholders de foto salvo los datos pendientes de la tabla.
+- El mapa de la sede es un embed de Google Maps por dirección (sin API key ni interacción). Verificar que el pin caiga justo en la sede (Maipú 1736, dentro de COTO).
