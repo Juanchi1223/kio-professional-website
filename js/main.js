@@ -196,3 +196,55 @@
   var el = document.querySelector('[data-anio]');
   if (el) el.textContent = new Date().getFullYear();
 })();
+
+/* Carrusel del equipo: barra de progreso y teclado (desde md es grilla) */
+(function () {
+  var riel = document.querySelector('[data-equipo]');
+  var barra = document.querySelector('[data-equipo-barra]');
+  if (!riel || !barra) return;
+
+  var mobile = window.matchMedia('(max-width: 767.98px)');
+  var reducido = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var pendiente = false;
+
+  function pintar() {
+    pendiente = false;
+    var ancho = riel.scrollWidth;
+    if (!ancho) return;
+    barra.style.width = (riel.clientWidth / ancho) * 100 + '%';
+    barra.style.left = (riel.scrollLeft / ancho) * 100 + '%';
+  }
+
+  function pedirPintar() {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(pintar);
+  }
+
+  riel.addEventListener('scroll', pedirPintar, { passive: true });
+  window.addEventListener('resize', pedirPintar);
+
+  riel.addEventListener('keydown', function (e) {
+    if (!mobile.matches) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    e.preventDefault();
+    var tarjeta = riel.firstElementChild;
+    var paso = tarjeta.getBoundingClientRect().width + 14;
+    riel.scrollBy({ left: e.key === 'ArrowRight' ? paso : -paso, behavior: reducido.matches ? 'auto' : 'smooth' });
+  });
+
+  // Desde md es una grilla: sin región enfocable ni rol de región
+  function ajustarModo() {
+    if (mobile.matches) {
+      riel.setAttribute('role', 'region');
+      riel.setAttribute('tabindex', '0');
+    } else {
+      riel.removeAttribute('role');
+      riel.removeAttribute('tabindex');
+    }
+    pedirPintar();
+  }
+
+  mobile.addEventListener('change', ajustarModo);
+  ajustarModo();
+})();

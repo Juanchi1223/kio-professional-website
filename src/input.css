@@ -101,6 +101,12 @@
     .pista-carrusel { scroll-behavior: auto; }
   }
 
+  /* Barra de progreso del carrusel de equipo (solo mobile, con JS) */
+  .progreso-equipo { display: none; }
+  @media (max-width: 767.98px) {
+    .js .progreso-equipo { display: block; }
+  }
+
   .chip-check {
     @apply flex items-center gap-3 rounded-[14px] bg-kio-negro-2 px-4 py-3.5 font-semibold;
   }
