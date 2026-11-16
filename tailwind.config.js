@@ -19,6 +19,8 @@ module.exports = {
           'texto-claro-2': '#b5b0ad',
           icuo: '#ffc600', // marca ICUO: usar siempre con texto negro (blanco no llega a AA)
           onyra: '#6c9cae', // marca onyrA: usar siempre con texto negro (blanco no llega a AA)
+          'icuo-texto': '#b38a00', // ICUO oscurecido para texto grande (3,2:1 sobre blanco)
+          'onyra-texto': '#5a8a9c', // onyrA oscurecido para texto grande (3,8:1 sobre blanco)
           gris: '#818080', // decorativo: NO usar como color de texto (no llega a AA)
           crema: '#f7f4f2',
           arena: '#efe9e6',

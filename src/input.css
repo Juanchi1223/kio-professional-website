@@ -81,39 +81,13 @@
     @apply h-7 w-auto opacity-70 brightness-0 transition-opacity duration-200 hover:opacity-100;
   }
 
-  /* Tarjetas de marcas: toman su color en hover/foco. En táctiles, solo la etiqueta lo muestra siempre */
-  .marca { @apply transition-[border-color,box-shadow] duration-200; }
-  .marca-icuo { --marca: theme(colors.kio.icuo); }
-  .marca-onyra { --marca: theme(colors.kio.onyra); }
-  .marca-tag {
-    @apply bg-kio-borde text-kio-negro transition-colors duration-200;
-  }
-  .marca-btn { @apply transition-[background-color,border-color,color,filter] duration-200; }
-  @media (hover: none) {
-    .marca .marca-tag { background-color: var(--marca); }
-  }
-  .marca:focus-within {
-    border-color: var(--marca);
-    box-shadow: 0 0 0 1px var(--marca);
-  }
-  .marca:focus-within .marca-tag { background-color: var(--marca); }
-  .marca:focus-within .marca-btn {
-    background-color: var(--marca);
-    border-color: var(--marca);
-    color: theme(colors.kio.negro);
-  }
+  /* Tarjetas de marcas: el nombre toma el color de marca solo en hover/foco (texto grande, ≥3:1) */
+  .marca-nombre { @apply transition-colors duration-200; }
+  .marca-icuo:focus-within .marca-nombre { color: theme(colors.kio.icuo-texto); }
+  .marca-onyra:focus-within .marca-nombre { color: theme(colors.kio.onyra-texto); }
   @media (hover: hover) {
-    .marca:hover {
-      border-color: var(--marca);
-      box-shadow: 0 0 0 1px var(--marca);
-    }
-    .marca:hover .marca-tag { background-color: var(--marca); }
-    .marca:hover .marca-btn {
-      background-color: var(--marca);
-      border-color: var(--marca);
-      color: theme(colors.kio.negro);
-    }
-    .marca .marca-btn:hover { filter: brightness(0.93); }
+    .marca-icuo:hover .marca-nombre { color: theme(colors.kio.icuo-texto); }
+    .marca-onyra:hover .marca-nombre { color: theme(colors.kio.onyra-texto); }
   }
 
   /* Carrusel de servicios (mobile: una tarjeta por vez; desde md es grilla) */
