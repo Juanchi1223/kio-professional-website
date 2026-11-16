@@ -91,8 +91,13 @@
 
   function render() {
     contador.textContent = actual + 1 + ' / ' + total;
-    prev.setAttribute('aria-disabled', String(actual === 0));
-    next.setAttribute('aria-disabled', String(actual === total - 1));
+    // En los extremos la flecha se oculta; si tenía el foco, pasa a la otra flecha
+    var enInicio = actual === 0;
+    var enFinal = actual === total - 1;
+    if (enInicio && document.activeElement === prev) next.focus();
+    if (enFinal && document.activeElement === next) prev.focus();
+    prev.hidden = enInicio;
+    next.hidden = enFinal;
   }
 
   function anunciar() {
