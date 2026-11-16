@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-kio-negro antialiased;
+    line-height: 1.5;
+  }
+  :focus-visible {
+    @apply outline outline-[3px] outline-offset-2 outline-kio-terracota;
+  }
+  .on-dark :focus-visible,
+  footer :focus-visible {
+    @apply outline-white;
+  }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .rail {
+    scrollbar-width: none;
+  }
+  .rail::-webkit-scrollbar { display: none; }
+
+  .eyebrow {
+    @apply flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-kio-terracota;
+  }
+  /* Marca de inicio de sección: línea corta que retoma la barra del H1 */
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    flex: none;
+  }
+  .h2 {
+    @apply text-balance;
+    @apply text-[32px] font-extrabold leading-[1.12] tracking-tight md:text-4xl lg:text-[44px];
+  }
+  .destacado { @apply text-kio-terracota; }
+
+  .btn {
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-full px-6 text-[17px] transition duration-150 active:scale-[0.98];
+  }
+  .btn-primario {
+    @apply btn bg-kio-terracota font-extrabold text-white hover:bg-kio-terracota-oscuro;
+  }
+  .btn-secundario {
+    @apply btn border-2 border-kio-negro bg-white font-bold text-kio-negro hover:bg-kio-negro hover:text-white;
+  }
+  .btn-blanco {
+    @apply btn bg-white font-extrabold text-kio-terracota hover:bg-kio-terracota-claro;
+  }
+  .btn-blanco-borde {
+    @apply btn border-2 border-white font-bold text-white hover:bg-white hover:text-kio-terracota;
+  }
+
+  /* Riel horizontal en mobile, grilla desde md */
+  .rail-snap {
+    @apply rail -mx-5 flex snap-x snap-mandatory gap-3.5 overflow-x-auto px-5 scroll-px-5 md:mx-0 md:snap-none md:overflow-visible md:px-0;
+  }
+
+  .wrap { @apply mx-auto w-full max-w-screen-xl px-5 md:px-8 lg:px-10; }
+  /* Separadores: cada corte entre secciones tiene su propia forma. El borde se dibuja con un
+     ::before del mismo color que la sección, montado sobre el final de la sección anterior. */
+  :root { --dh: 28px; --solapa: 24px; }
+  @media (min-width: 768px) { :root { --dh: 40px; --solapa: 32px; } }
+  @media (min-width: 1024px) { :root { --dh: 56px; --solapa: 40px; } }
+  .sep { position: relative; }
+  .sep::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: var(--dh);
+    background: inherit;
+    pointer-events: none;
+  }
+  .sep-arco::before { border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+  .sep-onda::before {
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+  }
+  /* Cierre de sección: el mismo recurso, dibujado hacia abajo sobre el inicio de la sección siguiente */
+  .sep-arco-fin::after,
+  .sep-onda-fin::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: inherit;
+    pointer-events: none;
+  }
+  .sep-arco-fin::after {
+    height: calc(var(--dh) * 0.5);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  }
+  .sep-onda-fin::after {
+    height: var(--dh);
+    transform: scaleY(-1);
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'><path d='M0 40V22C150 2 300 2 450 22S750 42 900 22 1050 2 1200 22V40Z'/></svg>") 0 0 / 100% 100% no-repeat;
+  }
+  /* Solapa redondeada: la usa el footer sobre el cartel del CTA */
+  .solapa {
+    position: relative;
+    margin-top: calc(var(--solapa) * -1);
+    border-top-left-radius: var(--solapa);
+    border-top-right-radius: var(--solapa);
+  }
+  /* Ritmo: secciones principales más amplias que las de apoyo */
+  .seccion { padding-top: 4rem; padding-bottom: 4rem; }
+  .seccion-apoyo { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+  @media (min-width: 768px) {
+    .seccion { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+    .seccion-apoyo { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .seccion { padding-top: 7rem; padding-bottom: 7rem; }
+    .seccion-apoyo { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+  }
+
+  /* Placeholder visible de foto/dato pendiente (ver docs/pendientes.md) */
+  .ph {
+    @apply grid place-items-center bg-kio-arena p-4 text-center text-sm font-semibold text-kio-texto-suave;
+  }
+
+  /* Logos de prepagas: monocromo; para sumar uno, agregar un <li> con <img class="logo-prepaga"> */
+  .logo-prepaga {
+    @apply h-7 w-auto opacity-70 brightness-0 transition-opacity duration-200 hover:opacity-100;
+  }
+
+  /* Tarjetas de marcas: el nombre toma el color de marca solo en hover/foco (texto grande, ≥3:1) */
+  .marca-nombre { @apply transition-colors duration-200; }
+  .marca-icuo:focus-within .marca-nombre { color: theme(colors.kio.icuo-texto); }
+  .marca-onyra:focus-within .marca-nombre { color: theme(colors.kio.onyra-texto); }
+  @media (hover: hover) {
+    .marca-icuo:hover .marca-nombre { color: theme(colors.kio.icuo-texto); }
+    .marca-onyra:hover .marca-nombre { color: theme(colors.kio.onyra-texto); }
+  }
+
+  /* Carrusel de servicios (mobile: una tarjeta por vez; desde md es grilla) */
+  .pista-carrusel { scroll-behavior: smooth; overscroll-behavior-x: contain; }
+  .carrusel-ctrl { display: none; }
+  @media (max-width: 767.98px) {
+    .js .carrusel-ctrl { display: flex; }
+    .js .hint-sin-js { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pista-carrusel { scroll-behavior: auto; }
+  }
+
+  /* Barra de progreso del carrusel de equipo (solo mobile, con JS) */
+  .progreso-equipo { display: none; }
+  @media (max-width: 767.98px) {
+    .js .progreso-equipo { display: block; }
+  }
+
+  .chip-check {
+    @apply flex items-center gap-3 rounded-[14px] bg-kio-negro-2 px-4 py-3.5 font-semibold;
+  }
+
+  /* Menú: en mobile es un panel colapsable (solo si hay JS); desde lg es una fila */
+  @media (max-width: 1023.98px) {
+    .js #menu:not(.is-open) { display: none; }
+  }
+}
+
+/* Menú abierto en mobile: el fondo no scrollea */
+@media (max-width: 1023.98px) {
+  html.menu-abierto { overflow: hidden; }
+}
